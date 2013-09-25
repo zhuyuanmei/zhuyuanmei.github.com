@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style type="text/css">
+	#div1 {width:488px; height:190px; padding:10px; border:1px solid #aaaaaa; margin-bottom:20px;}
+</style>
+</head>
+<body>
+	<p>JSON.stringify用法，暂不支持IE6,IE7;在IE8下对中文不能正常转换,但不影响最后JSON.parse还原成最初数据;</p>
+</body>
+<script type="text/javascript">
+	var student = new Object(); 
+	student.qq = "5485891512"; 
+	student.name = "Lanny"; 
+	student.age = 25; 
+
+	var stu = new Array(); 
+	stu[0] = "qq"; 
+	stu[1] = "age"; 
+	stu[2] = "Hi"; 
+
+	var json = JSON.stringify(student,stu); 
+
+	alert(json);  
+</script>
+</html>

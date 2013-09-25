@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html> 
+<head>
+    <meta charset="utf-8">
+    <title>setTimeout示例</title>
+</head>
+<body bgcolor=lightcyan text=red> 
+<table>
+    <tr valign=top> 
+        <td> 你在本网页逗留的时间: </td>
+        <td><form name=displayMin>
+                <input type="text" name="displayBox" value="0" size=4 >
+            </form>
+        </td>
+        <td>分</td>
+        <td><form name=displaySec>
+                <input type="text" name="displayBox" value="0" size=4 >
+            </form> 
+        </td>
+        <td>秒</td> 
+    </tr> 
+</table>
+<script>
+    var x = 0;
+    var y = -1;
+
+    function countMin()
+    {　
+       y = y + 1;
+    　 document.displayMin.displayBox.value = y;
+    　 setTimeout("countMin( )",60000);
+    }
+    function countSec()
+    {　
+       x = x + 1;
+    　 z = x % 60;
+    　 document.displaySec.displayBox.value = z;
+    　 setTimeout("countSec( )", 1000);
+    }
+    countMin();
+    countSec();
+</script>
+</body> 
+</html>
