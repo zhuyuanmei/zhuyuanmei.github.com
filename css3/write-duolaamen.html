@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <title>HTML5 Presentation</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css">
+    <link id="prettify-link" href="http://slides.html5rocks.com/src/prettify/prettify.css" rel="stylesheet" disabled="">
+    <link href="http://slides.html5rocks.com/styles/fonts.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="http://slides.html5rocks.com/styles/presentation.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="http://slides.html5rocks.com/styles/common.css" rel="stylesheet" type="text/css" media="screen">
+    <link class="theme" href="http://slides.html5rocks.com/styles/default.css" rel="stylesheet" type="text/css" media="screen">
+    <link class="theme" href="http://slides.html5rocks.com/styles/moon.css" rel="stylesheet" type="text/css" media="screen" disabled="">
+    <link class="theme" href="http://slides.html5rocks.com/styles/sand.css" rel="stylesheet" type="text/css" media="screen" disabled="">
+    <link class="theme" href="http://slides.html5rocks.com/styles/sea_wave.css" rel="stylesheet" type="text/css" media="screen" disabled="">
+    <style>
+        .container{
+            display: -webkit-box;
+            display: -moz-box;
+            display: box;
+            -webkit-box-pack: center;
+            -moz-box-pack: center;
+            box-pack: center;
+            -webkit-box-align: center;
+            -moz-box-align: center;
+            box-align: center;
+            width: 100%;
+            height: 100%;
+        }
+        .container-bd{
+            width: 900px;
+            height: 700px;
+        }
+    </style>
+<body>
+<div class="container">
+    <div class="container-bd">
+        <div class="slide styling current" id="rounded-corners">
+            <header><span class="css">CSS</span> <h1>Rounded corners</h1></header>
+            <section>
+                <pre class="prettyprint"><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; face</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span></b><span class="pun">:</span><span class="pln"> </span><span id="face-rounded-border-value"><span class="lit">0</span></span><span class="lit">px</span><span class="pun">;</span><span class="pln"> </span><input id="face-rounded-border" type="range" min="0" max="146" value="0" onchange="handleCorner(event)"><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left eye</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span></b><span class="pun">:</span><span class="pln"> </span><span id="lefteye-rounded-border-value"><span class="lit">0</span></span><span class="lit">px</span><span class="pun">;</span><span class="pln"> </span><input id="lefteye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)"><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; right eye</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span></b><span class="pun">:</span><span class="pln"> </span><span id="righteye-rounded-border-value"><span class="lit">0</span></span><span class="lit">px</span><span class="pun">;</span><span class="pln"> </span><input id="righteye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)"><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">base</span><span class="pln"> white</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span></b><span class="pun">:</span><span class="pln"> </span><span id="base_white-rounded-border-value"><span class="lit">0</span></span><span class="lit">px</span><span class="pun">;</span><span class="pln"> </span><input id="base_white-rounded-border" type="range" min="0" max="150" value="0" onchange="handleCorner(event)"><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; mouth</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span></b><span class="pun">:</span><span class="pln"> </span><span id="mouth-rounded-border-value"><span class="lit">0</span></span><span class="lit">px</span><span class="pun">;</span><span class="pln"> </span><input id="mouth-rounded-border" type="range" min="0" max="120" value="0" onchange="handleCorner(event)"><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; nose</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span></b><span class="pun">:</span><span class="pln"> </span><span id="nose-rounded-border-value"><span class="lit">0</span></span><span class="lit">px</span><span class="pun">;</span><span class="pln"> </span><input id="nose-rounded-border" type="range" min="0" max="50" value="0" onchange="handleCorner(event)"><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; left black eye</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span></b><span class="pun">:</span><span class="pln"> </span><span id="leftblackeye-rounded-border-value"><span class="lit">0</span></span><span class="lit">px</span><span class="pun">;</span><span class="pln"> </span><input id="leftblackeye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)"><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; right black eye</span><span class="pun">:</span><span class="pln"> </span><b><span class="pln">border</span><span class="pun">-</span><span class="pln">radius</span></b><span class="pun">:</span><span class="pln"> </span><span id="rightblackeye-rounded-border-value"><span class="lit">0</span></span><span class="lit">px</span><span class="pun">;</span><span class="pln"> </span><input id="rightblackeye-rounded-border" type="range" min="0" max="35" value="0" onchange="handleCorner(event)"><span class="pln"><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span></pre>
+                <div id="doraemon" class="example">
+                    <iframe src="duolaamen-module.html"></iframe>
+                </div>
+                <script>
+                    function handleCorner() {
+                        var doraemon = document.querySelector('#doraemon iframe').contentWindow.document;
+                        var elements = ["face", "lefteye", "righteye", "base_white", "mouth", "nose", "leftblackeye", "rightblackeye"];
+                        for (var i = 0; i < elements.length; i++) {
+                            var element = elements[i] + '-rounded-border';
+                            var borderVal = document.getElementById(element).value;
+                            document.getElementById(element + '-value').textContent = borderVal;
+                            var faceEl = doraemon.getElementById(elements[i]);
+                            faceEl.style.borderRadius = borderVal + 'px';
+                            faceEl.style.mozBorderRadius = borderVal + 'px';
+                        }
+                    }
+                </script>
+            </section>
+            <span class="counter"></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
