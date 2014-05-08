@@ -64,10 +64,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="write-duolaamen.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css3/write-duolaamen.html">
+      <file leaf-file-name="drag.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html5/drag.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="41" selection-start="7688" selection-end="7688" vertical-scroll-proportion="0.954708" vertical-offset="320" max-vertical-offset="1330">
+            <state line="11" column="14" selection-start="394" selection-end="394" vertical-scroll-proportion="0.24530517" vertical-offset="0" max-vertical-offset="852">
               <folding />
             </state>
           </provider>
@@ -89,6 +89,7 @@
         <option value="$PROJECT_DIR$/css3/duolaamen-module.html" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css3/write-duolaamen.html" />
+        <option value="$PROJECT_DIR$/html5/drag.html" />
       </list>
     </option>
   </component>
@@ -141,6 +142,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="zhuyuanmei.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="zhuyuanmei.github.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html5" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,12 +290,12 @@
       <changelist id="281fd3a4-4ebf-43e2-ba60-780614b527f4" name="Default" comment="" />
       <created>1399537748375</created>
       <updated>1399537748375</updated>
-      <workItem from="1399537753271" duration="4907000" />
+      <workItem from="1399537753271" duration="5839000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4907000" />
+    <option name="totallyTimeSpent" value="5839000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
@@ -373,7 +388,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css3/write-duolaamen.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="41" selection-start="7688" selection-end="7688" vertical-scroll-proportion="0.954708" vertical-offset="320" max-vertical-offset="1330">
+        <state line="54" column="76" selection-start="7549" selection-end="7549" vertical-scroll-proportion="0.6376639" vertical-offset="491" max-vertical-offset="1330">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html5/drag.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="14" selection-start="394" selection-end="394" vertical-scroll-proportion="0.24530517" vertical-offset="0" max-vertical-offset="852">
           <folding />
         </state>
       </provider>
