@@ -64,19 +64,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="22" selection-start="1355" selection-end="1355" vertical-scroll-proportion="5.428571" vertical-offset="874" max-vertical-offset="2508">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="move-eye.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/css3/move-eye.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="233" column="9" selection-start="5711" selection-end="5711" vertical-scroll-proportion="0.8438967" vertical-offset="3708" max-vertical-offset="4560">
+            <state line="38" column="22" selection-start="1355" selection-end="1355" vertical-scroll-proportion="-0.49413145" vertical-offset="1143" max-vertical-offset="2508">
               <folding />
             </state>
           </provider>
@@ -448,15 +439,15 @@
       <created>1399537748375</created>
       <updated>1399537748375</updated>
       <workItem from="1399537753271" duration="13954000" />
-      <workItem from="1399617169215" duration="2865000" />
+      <workItem from="1399617169215" duration="2944000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16819000" />
+    <option name="totallyTimeSpent" value="16898000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="1" />
+    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -615,13 +606,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="22" selection-start="1355" selection-end="1355" vertical-scroll-proportion="5.428571" vertical-offset="874" max-vertical-offset="2508">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/html5/drag.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="525" selection-end="533" vertical-scroll-proportion="-9.5" vertical-offset="0" max-vertical-offset="741">
@@ -646,6 +630,13 @@
     <entry file="file://$PROJECT_DIR$/css3/move-eye.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="233" column="9" selection-start="5711" selection-end="5711" vertical-scroll-proportion="0.8438967" vertical-offset="3708" max-vertical-offset="4560">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="22" selection-start="1355" selection-end="1355" vertical-scroll-proportion="-0.49413145" vertical-offset="1143" max-vertical-offset="2508">
           <folding />
         </state>
       </provider>
