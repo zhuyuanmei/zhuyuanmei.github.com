@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1">
+    <title>slide动画示例</title>
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans|Droid+Sans+Mono" rel="stylesheet" type="text/css">
+    <link id="prettify-link" href="http://slides.html5rocks.com/src/prettify/prettify.css" rel="stylesheet" disabled="">
+    <link href="http://slides.html5rocks.com/styles/fonts.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="http://slides.html5rocks.com/styles/presentation.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="http://slides.html5rocks.com/styles/common.css" rel="stylesheet" type="text/css" media="screen">
+    <link class="theme" href="http://slides.html5rocks.com/styles/default.css" rel="stylesheet" type="text/css" media="screen">
+    <link class="theme" href="http://slides.html5rocks.com/styles/moon.css" rel="stylesheet" type="text/css" media="screen" disabled="">
+    <link class="theme" href="http://slides.html5rocks.com/styles/sand.css" rel="stylesheet" type="text/css" media="screen" disabled="">
+    <link class="theme" href="http://slides.html5rocks.com/styles/sea_wave.css" rel="stylesheet" type="text/css" media="screen" disabled="">
+<style>
+    .content{
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        width: 100%;
+        height: 100%;
+    }
+    .main-cont{
+        width:900px;
+        height:700px;
+    }
+</style>
+<body>
+<div class="content">
+    <div class="main-cont">
+        <div class="slide styling current" id="css-transitions">
+            <header><span class="css">CSS</span> <h1>Transitions</h1></header>
+            <section>
+
+                <div class="transitions example">
+                    <div id="transitions-box-1" class="right"></div>
+                </div>
+
+                <pre class="prettyprint"><span class="com">#box.left {</span><span class="pln"><br>&nbsp; margin</span><span class="pun">-</span><span class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br></span><span class="com">#box.right {</span><span class="pln"><br>&nbsp; margin</span><span class="pun">-</span><span class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span class="lit">1000px</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'box'</span><span class="pun">).</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">'left'</span><span class="pun">;</span><span class="pln"> </span><button onclick="transitionLeft(1)"><span class="typ">Left</span></button><span class="pln"><br>document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'box'</span><span class="pun">).</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">'right'</span><span class="pun">;</span><span class="pln"> </span><button onclick="transitionRight(1)"><span class="typ">Right</span></button></pre>
+
+                <div class="transitions example">
+                    <div id="transitions-box-2" class="right"></div>
+                </div>
+
+                <pre class="prettyprint"><span class="com">#box {</span><span class="pln"><br>&nbsp; </span><span class="pun">-</span><span class="pln">webkit</span><span class="pun">-</span><b><span class="pln">transition</span></b><span class="pun">:</span><span class="pln"> margin</span><span class="pun">-</span><span class="pln">left </span><span class="lit">1s</span><span class="pln"> ease</span><span class="pun">-</span><span class="kwd">in</span><span class="pun">-</span><span class="kwd">out</span><span class="pun">;</span><span class="pln"><br></span><span class="pun">}</span><span class="pln"><br><br>document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'box'</span><span class="pun">).</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">'left'</span><span class="pun">;</span><span class="pln"> </span><button onclick="transitionLeft(2)"><span class="typ">Left</span></button><span class="pln"><br>document</span><span class="pun">.</span><span class="pln">getElementById</span><span class="pun">(</span><span class="str">'box'</span><span class="pun">).</span><span class="pln">className </span><span class="pun">=</span><span class="pln"> </span><span class="str">'right'</span><span class="pun">;</span><span class="pln"> </span><button onclick="transitionRight(2)"><span class="typ">Right</span></button></pre>
+
+
+                <script defer="">
+                    function transitionLeft(no) {
+                        document.getElementById('transitions-box-' + no).className = 'left';
+                    }
+                    function transitionRight(no) {
+                        document.getElementById('transitions-box-' + no).className = 'right';
+                    }
+                </script>
+            </section>
+            <span class="counter"></span></div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
