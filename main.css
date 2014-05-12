@@ -300,4 +300,28 @@ body{
         @media only screen and (max-width:660px){
                 .author-info{display:none;}
         }
-		
+
+    .page a, .page a:visited{
+        display:inline-block;
+        width:25px;
+        height:25px;
+        line-height: 25px;
+        text-align: center;
+        background: #fff;
+        color:rgba(104,171,194,1);
+        text-decoration: none;
+    }
+
+    .page a:hover{
+        background: rgba(104,171,194,1);
+        color:#fff;
+    }
+
+    .page .current{
+        background: rgba(104,171,194,1);
+        color:#fff;
+    }
+
+    .page span{
+       color:rgba(104,171,194,1);
+    }

@@ -21,9 +21,9 @@
         </div>
 		<div class="content-bd">
 			<div class="catalog">
-				<div id="J_catalog_1">
+				<div id="J_catalog_1" class="J_Items_1">
 					<p class="chapter">CSS3</p>
-					<ul>
+					<ul id="J_Data1">
 						<li><a href="css3/move-eye.html" target="_blank">eyes转动</a></li>
 						<li><a href="css3/adjust-width.html" target="_blank">宽度自适应</a></li>
 						<li><a href="css3/earth.html" target="_blank">地球仪自传</a></li>
@@ -31,15 +31,15 @@
                         <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon</a></li>
 					</ul>
 				</div>
-				<div id="J_catalog_2" style="display:none;">
+				<div id="J_catalog_2" style="display:none;" class="J_Items_2">
 					<p class="chapter">HTML5</p>
-					<ul>
+					<ul id="J_Data2">
 						<li><a href="html5/drag.html" target="_blank">简易拖拽效果</a></li>
 					</ul>
 				</div>
-				<div id="J_catalog_3" style="display:none;">
+				<div id="J_catalog_3" style="display:none;" class="J_Items_3">
 					<p class="chapter">JavaScript</p>
-					<ul>
+					<ul id="J_Data3">
 						<li><a href="js/array-sort.html" target="_blank">数组排序</a></li>
 						<li><a href="js/JSON-stringify.html" target="_blank">JSON用法</a></li>
 						<li><a href="js/js-dom.html" target="_blank">DOM元素操作</a></li>
@@ -48,9 +48,9 @@
 						<li><a href="js/same-element.html" target="_blank">收集数组重复元素</a></li>
 					</ul>
 				</div>
-				<div id="J_catalog_4" style="display:none;">
+				<div id="J_catalog_4" style="display:none;" class="J_Items_4">
 					<p class="chapter">Demo</p>
-					<ul>
+					<ul id="J_Data4">
 						<li><a href="http://www.19lou.com/forum-2269-thread-6501381895810324-1-1.html" target="_blank">图片轮播</a></li>
 						<li><a href="http://www.19lou.com/r/1/hta11.html" target="_blank">花坛预览组件</a></li>
 						<li><a href="http://www.19lou.com/forum-464703-thread-10401381842607632-1-1.html" target="_blank">楼层电梯功能</a></li>
@@ -60,7 +60,7 @@
 				</div>
 			</div>
 			<div class="cr-container">
-				<input id="select-img-1" name="radio-set-1" type="radio" class="cr-selector-img-1" data-num="1" checked/>
+				<input id="select-img-1" name="radio-set-1" type="radio" class="cr-selector-img-1 current" data-num="1" checked/>
 				<label for="select-img-1" class="cr-label-img-1">1</label>
 
 				<input id="select-img-2" name="radio-set-1" type="radio" data-num="2" class="cr-selector-img-2" />
@@ -110,15 +110,73 @@
 	</div>
   </body>
   <script type="text/javascript" src="http://js2.citysbs.com/0.7.1.37/forum/lib/jquery.js?v=0.7.2.013103"></script>
+  <script type="text/javascript" src="http://js2.citysbs.com/0.7.5.50/forum/lib/mustache.js?v=0.7.5.0508"></script>
   <script type="text/javascript">
-    var commonStr = "#J_catalog_";
-	var num = 1;
+    var commonStr = "#J_catalog_",
+        num = 1,
+        maxPage;
+
+    var pageTemp = [
+            '{{#PreviewFlag}}',
+            '<a href="/page6" class="J_Preview current">&lt;</a>',
+            '{{/PreviewFlag}}',
+            '<a href="/">1</a>',
+            '<a href="/page2">2</a>',
+            '<a href="/page3">3</a>',
+            '{{#MoreFlag}}',
+            '<span class="J_Points">...</span>',
+            '{{/MoreFlag}}',
+            '<a href="/page6">6</a>',
+            '<a href="/page7">7</a>',
+            '<a href="/page8">8</a>',
+            '{{#NextFlag}}',
+                '<a href="/page8" class="J_Next">&gt;</a>',
+            '{{/NextFlag}}'
+    ];
+
+    function Page(){}
+
+    Page.prototype.init = function(){
+        var hash = {};
+
+        if(maxPage >= 8){
+            hash.NextFlag = true;
+            hash.MoreFlag = true;
+        }else{
+            hash.NextFlag = false;
+            hash.MoreFlag = false;
+        }
+
+        hash.PreviewFlag = false;
+
+        var $page = Mustache.render(pageTemp.join(''), hash);
+
+        //$('#J_Data' + num).
+    };
+
+    Page.prototype.render = function(){
+
+    };
+
+    var page = new Page();
 	
 	$(".cr-container input").click(function(){
 		var $this = $(this);
-		num = $this.attr("data-num");
-		$(commonStr+num).siblings().hide();
-		$(commonStr+num).show();
+
+        if(!($this.hasClass('current'))){
+            $this.siblings().removeClass('current');
+            $this.addClass('current');
+
+            num = $this.attr("data-num");
+            $(commonStr+num).siblings().hide();
+            $(commonStr+num).show();
+
+            maxPage = $('#J_Data' + num).find('li').length;
+
+            if(maxPage > 5){
+                page.init();
+            }
+        }
 	});
   </script>
 </html>
