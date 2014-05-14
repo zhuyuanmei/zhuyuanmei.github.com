@@ -177,7 +177,8 @@
     };
 
     Page.prototype.render = function(){
-        var items = $('#J_Data' + num).find('li');
+        var items = $('#J_Data' + num).find('li'),
+            catalog = 'J_catalog_' + num;
 
         $.each(items, function(key, value) {
             if(key+1 > perPage){
@@ -185,10 +186,10 @@
             };
         });
 
-        $(".page").delegate(".J_Page","click",function(){
+        $("#" + catalog).delegate(".page .J_Page","click",function(){
             var $this = $(this),
-                $prePage = $('.J_Preview'),
-                $nextPage = $('.J_Next');
+                $prePage = $('#' + catalog + ' .J_Preview'),
+                $nextPage = $('#' + catalog + ' .J_Next');
 
             if(!($this.hasClass('current'))){
                 $this.siblings().removeClass('current');
@@ -214,9 +215,9 @@
             }
         });
 
-        $('.page').delegate('.J_Preview','click', function(){
+        $("#" + catalog).delegate('.page .J_Preview','click', function(){
             var $this = $(this),
-                $nextPage = $('.J_Next');
+                $nextPage = $('#' + catalog + ' .J_Next');
             if($this.attr('data-page') !== '1'){
                 $nextPage.removeClass('disabled');
 
@@ -234,7 +235,7 @@
                     }
                 });
 
-                $.each($(".J_Page"), function(key, value) {
+                $.each($('#' + catalog + ' .J_Page'), function(key, value) {
                     if(parseInt($(value).attr('data-page')) === curPage){
                         $(value).siblings().removeClass('current');
                         $(value).addClass('current');
@@ -247,9 +248,9 @@
             }
         });
 
-        $('.page').delegate('.J_Next','click', function(){
+        $("#" + catalog).delegate('.page .J_Next','click', function(){
             var $this = $(this),
-                $prePage = $('.J_Preview');
+                $prePage = $('#' + catalog + ' .J_Preview');
             if(parseInt($this.attr('data-page')) !== Math.ceil(sumPage / perPage)){
                 $prePage.removeClass('disabled');
 
@@ -267,7 +268,7 @@
                     }
                 });
 
-                $.each($(".J_Page"), function(key, value) {
+                $.each($('#' + catalog + ' .J_Page'), function(key, value) {
                     if(parseInt($(value).attr('data-page')) === curPage){
                         $(value).siblings().removeClass('current');
                         $(value).addClass('current');
