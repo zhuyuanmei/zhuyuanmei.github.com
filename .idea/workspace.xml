@@ -67,16 +67,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="162" column="86" selection-start="6353" selection-end="6353" vertical-scroll-proportion="0.36520737" vertical-offset="2761" max-vertical-offset="4123">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="329" column="33" selection-start="11452" selection-end="11452" vertical-scroll-proportion="0.0" vertical-offset="5488" max-vertical-offset="6384">
+            <state line="42" column="86" selection-start="1610" selection-end="1610" vertical-scroll-proportion="-3.1301844" vertical-offset="3515" max-vertical-offset="4427">
               <folding />
             </state>
           </provider>
@@ -95,8 +86,8 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -391,12 +382,12 @@
       <changelist id="ab3ae7b3-2d96-458f-a292-6eef376a170e" name="Default" comment="" />
       <created>1400047599377</created>
       <updated>1400047599377</updated>
-      <workItem from="1400047602487" duration="10436000" />
+      <workItem from="1400047602487" duration="13530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10436000" />
+    <option name="totallyTimeSpent" value="13530000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -482,14 +473,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="329" column="33" selection-start="11452" selection-end="11452" vertical-scroll-proportion="0.0" vertical-offset="5488" max-vertical-offset="6384">
+        <state line="329" column="15" selection-start="11438" selection-end="11438" vertical-scroll-proportion="0.8604911" vertical-offset="5480" max-vertical-offset="6403">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="162" column="86" selection-start="6353" selection-end="6353" vertical-scroll-proportion="0.36520737" vertical-offset="2761" max-vertical-offset="4123">
+        <state line="42" column="86" selection-start="1610" selection-end="1610" vertical-scroll-proportion="-3.1301844" vertical-offset="3515" max-vertical-offset="4427">
           <folding />
         </state>
       </provider>

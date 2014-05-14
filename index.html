@@ -29,12 +29,6 @@
                         <li><a href="css3/earth.html" target="_blank">地球仪自传</a></li>
                         <li><a href="css3/shadow.html" target="_blank">各类shadows</a></li>
                         <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon</a></li>
-
-                        <li><a href="css3/move-eye.html" target="_blank">eyes转动</a></li>
-                        <li><a href="css3/adjust-width.html" target="_blank">宽度自适应</a></li>
-                        <li><a href="css3/earth.html" target="_blank">地球仪自传</a></li>
-                        <li><a href="css3/shadow.html" target="_blank">各类shadows</a></li>
-                        <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon</a></li>
 					</ul>
 				</div>
 				<div id="J_catalog_2" style="display:none;">
@@ -160,9 +154,9 @@
 
         for (var i = 1; i <= maxPage ; i++) {
             if(i === 1){
-                pageHtml = pageHtml + '<span class="common current">' + i + '</span>';
+                pageHtml = pageHtml + '<a class="current" href="javascript:;" data-page="' + i + '">' + i + '</a>';
             }else{
-                pageHtml = pageHtml + '<a href="/" class="common">' + i + '</a>';
+                pageHtml = pageHtml + '<a href="javascript:;" data-page="' + i + '">' + i + '</a>';
             }
         }
 
@@ -178,10 +172,32 @@
     };
 
     Page.prototype.render = function(){
-        $.each( $('#J_Data' + num).find('li'), function(key, value) {
-            if(key > 4){
+        var items = $('#J_Data' + num).find('li');
+
+        $.each(items, function(key, value) {
+            if(key+1 > 5){
                 $(value).hide();
             };
+        });
+
+        $(".page").delegate("a","click",function(){
+            var $this = $(this);
+
+            if(!($this.hasClass('current'))){
+
+                $this.siblings().removeClass('current');
+                $this.addClass('current');
+
+                var actPage = $this.attr('data-page');
+
+                $.each(items, function(key, value) {
+                    if((actPage-1)*5+1 <= key+1 && key+1 <= actPage*5){
+                        $(value).show();
+                    }else{
+                        $(value).hide();
+                    }
+                });
+            }
         });
     };
 
