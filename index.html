@@ -29,6 +29,21 @@
                         <li><a href="css3/earth.html" target="_blank">地球仪自传</a></li>
                         <li><a href="css3/shadow.html" target="_blank">各类shadows</a></li>
                         <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon</a></li>
+
+                        <li><a href="css3/move-eye.html" target="_blank">eyes转动-2</a></li>
+                        <li><a href="css3/adjust-width.html" target="_blank">宽度自适应-2</a></li>
+                        <li><a href="css3/earth.html" target="_blank">地球仪自传-2</a></li>
+                        <li><a href="css3/shadow.html" target="_blank">各类shadows-2</a></li>
+                        <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon-2</a></li>
+
+                        <li><a href="css3/move-eye.html" target="_blank">eyes转动-3</a></li>
+                        <li><a href="css3/adjust-width.html" target="_blank">宽度自适应-3</a></li>
+                        <li><a href="css3/earth.html" target="_blank">地球仪自传-3</a></li>
+                        <li><a href="css3/shadow.html" target="_blank">各类shadows-3</a></li>
+                        <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon-3</a></li>
+
+                        <li><a href="css3/move-eye.html" target="_blank">eyes转动-4</a></li>
+                        <li><a href="css3/adjust-width.html" target="_blank">宽度自适应-4</a></li>
 					</ul>
 				</div>
 				<div id="J_catalog_2" style="display:none;">
@@ -114,19 +129,17 @@
   <script type="text/javascript">
     var commonStr = "#J_catalog_",
         num = 1,
-        sumPage;
+        sumPage,
+        perPage = 5;
 
     var pageTemp = [
             '<div class="page">',
             '{{#PreviewFlag}}',
-            '<a href="/page6" class="J_Preview current">&lt;</a>',
+            '<a href="javascript:;" class="J_Preview disabled" data-page="1">&lt;</a>',
             '{{/PreviewFlag}}',
             '{{&pages}}',
-//            '{{#MoreFlag}}',
-//            '<span class="J_Points">...</span>',
-//            '{{/MoreFlag}}',
             '{{#NextFlag}}',
-                '<a href="/page8" class="J_Next">&gt;</a>',
+                '<a href="javascript:;" class="J_Next" data-page="1">&gt;</a>',
             '{{/NextFlag}}',
             '</div>'
     ];
@@ -136,27 +149,19 @@
     Page.prototype.init = function(){
         var hash = {};
 
-        var perPage = 5;
-
         var maxPage = Math.ceil(sumPage / perPage);
 
-        if(maxPage >= 9){
-            hash.NextFlag = true;
-            hash.MoreFlag = true;
-        }else{
-            hash.NextFlag = false;
-            hash.MoreFlag = false;
-        }
+        hash.NextFlag = true;
 
-        hash.PreviewFlag = false;
+        hash.PreviewFlag = true;
 
         var pageHtml = '';
 
         for (var i = 1; i <= maxPage ; i++) {
             if(i === 1){
-                pageHtml = pageHtml + '<a class="current" href="javascript:;" data-page="' + i + '">' + i + '</a>';
+                pageHtml = pageHtml + '<a class="current J_Page" href="javascript:;" data-page="' + i + '">' + i + '</a>';
             }else{
-                pageHtml = pageHtml + '<a href="javascript:;" data-page="' + i + '">' + i + '</a>';
+                pageHtml = pageHtml + '<a class="J_Page" href="javascript:;" data-page="' + i + '">' + i + '</a>';
             }
         }
 
@@ -175,41 +180,111 @@
         var items = $('#J_Data' + num).find('li');
 
         $.each(items, function(key, value) {
-            if(key+1 > 5){
+            if(key+1 > perPage){
                 $(value).hide();
             };
         });
 
-        $(".page").delegate("a","click",function(){
-            var $this = $(this);
+        $(".page").delegate(".J_Page","click",function(){
+            var $this = $(this),
+                $prePage = $('.J_Preview'),
+                $nextPage = $('.J_Next');
 
             if(!($this.hasClass('current'))){
-
                 $this.siblings().removeClass('current');
                 $this.addClass('current');
 
                 var actPage = $this.attr('data-page');
 
                 $.each(items, function(key, value) {
-                    if((actPage-1)*5+1 <= key+1 && key+1 <= actPage*5){
+                    if((actPage-1)*perPage+1 <= key+1 && key+1 <= actPage*perPage){
                         $(value).show();
                     }else{
                         $(value).hide();
                     }
                 });
+
+                $prePage.attr('data-page',actPage);
+
+                $nextPage.attr('data-page',actPage);
+
+                actPage === '1' ? $prePage.addClass('disabled') : $prePage.removeClass('disabled');
+
+                parseInt(actPage) === Math.ceil(sumPage / perPage) ? $nextPage.addClass('disabled') : $nextPage.removeClass('disabled');
+            }
+        });
+
+        $('.page').delegate('.J_Preview','click', function(){
+            var $this = $(this),
+                $nextPage = $('.J_Next');
+            if($this.attr('data-page') !== '1'){
+                $nextPage.removeClass('disabled');
+
+                var curPage = parseInt($this.attr('data-page'))-1;
+
+                $this.attr('data-page',curPage);
+
+                $nextPage.attr('data-page',curPage);
+
+                $.each(items, function(key, value) {
+                    if((curPage-1)*perPage+1 <= key+1 && key+1 <= curPage*perPage){
+                        $(value).show();
+                    }else{
+                        $(value).hide();
+                    }
+                });
+
+                $.each($(".J_Page"), function(key, value) {
+                    if(parseInt($(value).attr('data-page')) === curPage){
+                        $(value).siblings().removeClass('current');
+                        $(value).addClass('current');
+                    }
+                });
+
+                if(curPage === 1){
+                    $this.addClass('disabled');
+                }
+            }
+        });
+
+        $('.page').delegate('.J_Next','click', function(){
+            var $this = $(this),
+                $prePage = $('.J_Preview');
+            if(parseInt($this.attr('data-page')) !== Math.ceil(sumPage / perPage)){
+                $prePage.removeClass('disabled');
+
+                var curPage = parseInt($this.attr('data-page'))+1;
+
+                $this.attr('data-page',curPage);
+
+                $prePage.attr('data-page',curPage);
+
+                $.each(items, function(key, value) {
+                    if((curPage-1)*perPage+1 <= key+1 && key+1 <= curPage*perPage){
+                        $(value).show();
+                    }else{
+                        $(value).hide();
+                    }
+                });
+
+                $.each($(".J_Page"), function(key, value) {
+                    if(parseInt($(value).attr('data-page')) === curPage){
+                        $(value).siblings().removeClass('current');
+                        $(value).addClass('current');
+                    }
+                });
+
+                if(curPage === Math.ceil(sumPage / perPage)){
+                    $this.addClass('disabled');
+                }
             }
         });
     };
 
     var page = new Page();
 
-    //首屏默认触发分页函数
-    //$("input[type=radio]:checked").trigger('click');
-
 	$(".cr-container input").click(function(){
 		var $this = $(this);
-
-        //if(!($this.hasClass('current'))){
             $this.siblings().removeClass('current');
             $this.addClass('current');
 
@@ -217,12 +292,14 @@
             $(commonStr+num).siblings().hide();
             $(commonStr+num).show();
 
-        sumPage = $('#J_Data' + num).find('li').length;
+            sumPage = $('#J_Data' + num).find('li').length;
 
-            if(sumPage > 5 && !($('.container').data('page-'+num))){
+            if(sumPage > perPage && !($('.container').data('page-'+num))){
                 page.init();
             }
-        //}
 	});
+
+    //首屏默认触发分页函数
+    $("#select-img-1").trigger('click')
   </script>
 </html>

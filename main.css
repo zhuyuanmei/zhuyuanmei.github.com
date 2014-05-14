@@ -330,3 +330,12 @@ body{
     .page span{
        color:rgba(104,171,194,1);
     }
+
+    .page a.disabled, .page a.disabled:visited{
+        background:#ccc;
+        color:#fff;
+    }
+
+    .page a.disabled:hover{
+        background: #ccc;
+    }
