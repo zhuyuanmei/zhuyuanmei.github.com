@@ -121,15 +121,10 @@
             '{{#PreviewFlag}}',
             '<a href="/page6" class="J_Preview current">&lt;</a>',
             '{{/PreviewFlag}}',
-            '<a href="/">1</a>',
-            '<a href="/page2">2</a>',
-            '<a href="/page3">3</a>',
-            '{{#MoreFlag}}',
-            '<span class="J_Points">...</span>',
-            '{{/MoreFlag}}',
-            '<a href="/page6">7</a>',
-            '<a href="/page7">8</a>',
-            '<a href="/page8">9</a>',
+            '{{&pages}}',
+//            '{{#MoreFlag}}',
+//            '<span class="J_Points">...</span>',
+//            '{{/MoreFlag}}',
             '{{#NextFlag}}',
                 '<a href="/page8" class="J_Next">&gt;</a>',
             '{{/NextFlag}}',
@@ -151,17 +146,19 @@
 
         hash.PreviewFlag = false;
 
-        var pageArr = [];
+        var pageHtml = '';
 
         for (var i = 1; i <= maxPage ; i++) {
-            pageArr.push(i);
+            pageHtml = pageHtml + '<a href="/">' + i + '</a>';
         }
 
-        hash.pages = pageArr;
+        hash.pages = pageHtml;
 
         var $page = Mustache.render(pageTemp.join(''), hash);
 
         $(commonStr + num).append($page);
+
+        $('.container').data('page-'+num,true);
     };
 
     Page.prototype.render = function(){
@@ -170,10 +167,13 @@
 
     var page = new Page();
 
+    //首屏默认触发分页函数
+    //$("input[type=radio]:checked").trigger('click');
+
 	$(".cr-container input").click(function(){
 		var $this = $(this);
 
-        if(!($this.hasClass('current'))){
+        //if(!($this.hasClass('current'))){
             $this.siblings().removeClass('current');
             $this.addClass('current');
 
@@ -183,10 +183,10 @@
 
             maxPage = $('#J_Data' + num).find('li').length;
 
-            if(maxPage > 3 && num !== 1){
+            if(maxPage > 3 && !($('.container').data('page-'+num))){
                 page.init();
             }
-        }
+        //}
 	});
   </script>
 </html>
