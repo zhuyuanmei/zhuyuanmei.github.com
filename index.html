@@ -25,8 +25,14 @@
 					<p class="chapter">CSS3</p>
 					<ul id="J_Data1">
 						<li><a href="css3/move-eye.html" target="_blank">eyes转动</a></li>
-						<li><a href="css3/adjust-width.html" target="_blank">宽度自适应</a></li>
-						<li><a href="css3/earth.html" target="_blank">地球仪自传</a></li>
+                        <li><a href="css3/adjust-width.html" target="_blank">宽度自适应</a></li>
+                        <li><a href="css3/earth.html" target="_blank">地球仪自传</a></li>
+                        <li><a href="css3/shadow.html" target="_blank">各类shadows</a></li>
+                        <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon</a></li>
+
+                        <li><a href="css3/move-eye.html" target="_blank">eyes转动</a></li>
+                        <li><a href="css3/adjust-width.html" target="_blank">宽度自适应</a></li>
+                        <li><a href="css3/earth.html" target="_blank">地球仪自传</a></li>
                         <li><a href="css3/shadow.html" target="_blank">各类shadows</a></li>
                         <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon</a></li>
 					</ul>
@@ -114,7 +120,7 @@
   <script type="text/javascript">
     var commonStr = "#J_catalog_",
         num = 1,
-        maxPage;
+        sumPage;
 
     var pageTemp = [
             '<div class="page">',
@@ -136,6 +142,10 @@
     Page.prototype.init = function(){
         var hash = {};
 
+        var perPage = 5;
+
+        var maxPage = Math.ceil(sumPage / perPage);
+
         if(maxPage >= 9){
             hash.NextFlag = true;
             hash.MoreFlag = true;
@@ -149,7 +159,11 @@
         var pageHtml = '';
 
         for (var i = 1; i <= maxPage ; i++) {
-            pageHtml = pageHtml + '<a href="/">' + i + '</a>';
+            if(i === 1){
+                pageHtml = pageHtml + '<span class="common current">' + i + '</span>';
+            }else{
+                pageHtml = pageHtml + '<a href="/" class="common">' + i + '</a>';
+            }
         }
 
         hash.pages = pageHtml;
@@ -159,10 +173,16 @@
         $(commonStr + num).append($page);
 
         $('.container').data('page-'+num,true);
+
+        this.render();
     };
 
     Page.prototype.render = function(){
-
+        $.each( $('#J_Data' + num).find('li'), function(key, value) {
+            if(key > 4){
+                $(value).hide();
+            };
+        });
     };
 
     var page = new Page();
@@ -181,9 +201,9 @@
             $(commonStr+num).siblings().hide();
             $(commonStr+num).show();
 
-            maxPage = $('#J_Data' + num).find('li').length;
+        sumPage = $('#J_Data' + num).find('li').length;
 
-            if(maxPage > 3 && !($('.container').data('page-'+num))){
+            if(sumPage > 5 && !($('.container').data('page-'+num))){
                 page.init();
             }
         //}

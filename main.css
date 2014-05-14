@@ -301,13 +301,16 @@ body{
                 .author-info{display:none;}
         }
 
-    .page a, .page a:visited{
+    .page .common{
         display:inline-block;
         width:25px;
         height:25px;
         line-height: 25px;
-        margin-right:2px;
         text-align: center;
+        margin-right:2px;
+    }
+
+    .page a, .page a:visited{
         background: #fff;
         color:rgba(104,171,194,1);
         text-decoration: none;
