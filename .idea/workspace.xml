@@ -64,19 +64,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="90" selection-start="2752" selection-end="2752" vertical-scroll-proportion="0.38364056" vertical-offset="750" max-vertical-offset="5928">
+            <state line="57" column="90" selection-start="2752" selection-end="2752" vertical-scroll-proportion="-20.035715" vertical-offset="522" max-vertical-offset="5928">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="maze-tree.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="maze-tree.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/maze-tree.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="8" selection-start="96" selection-end="96" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="3306">
+            <state line="6" column="8" selection-start="96" selection-end="96" vertical-scroll-proportion="0.1313364" vertical-offset="0" max-vertical-offset="3306">
               <folding />
             </state>
           </provider>
@@ -408,12 +408,12 @@
       <created>1400047599377</created>
       <updated>1400047599377</updated>
       <workItem from="1400047602487" duration="23324000" />
-      <workItem from="1400119557371" duration="1209000" />
+      <workItem from="1400119557371" duration="2090000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24533000" />
+    <option name="totallyTimeSpent" value="25414000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -509,16 +509,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/maze-tree.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="8" selection-start="96" selection-end="96" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="3306">
+        <state line="57" column="90" selection-start="2752" selection-end="2752" vertical-scroll-proportion="-20.035715" vertical-offset="522" max-vertical-offset="5928">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/maze-tree.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="90" selection-start="2752" selection-end="2752" vertical-scroll-proportion="0.38364056" vertical-offset="750" max-vertical-offset="5928">
+        <state line="6" column="8" selection-start="96" selection-end="96" vertical-scroll-proportion="0.1313364" vertical-offset="0" max-vertical-offset="3306">
           <folding />
         </state>
       </provider>
