@@ -64,19 +64,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="91" selection-start="3971" selection-end="3971" vertical-scroll-proportion="0.5691244" vertical-offset="912" max-vertical-offset="5947">
+            <state line="74" column="91" selection-start="3971" selection-end="3971" vertical-scroll-proportion="-17.642857" vertical-offset="912" max-vertical-offset="5947">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="select_ck.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="select_ck.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/select_ck.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="598" column="86" selection-start="26008" selection-end="26008" vertical-scroll-proportion="-31.892857" vertical-offset="10469" max-vertical-offset="11609">
+            <state line="3" column="71" selection-start="101" selection-end="101" vertical-scroll-proportion="0.06666667" vertical-offset="0" max-vertical-offset="11609">
               <folding />
             </state>
           </provider>
@@ -98,8 +98,8 @@
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/js/maze-tree.html" />
         <option value="$PROJECT_DIR$/res_addr.html" />
-        <option value="$PROJECT_DIR$/demo/select_ck.html" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/demo/select_ck.html" />
       </list>
     </option>
   </component>
@@ -411,15 +411,15 @@
       <workItem from="1400047602487" duration="23324000" />
       <workItem from="1400119557371" duration="3273000" />
       <workItem from="1400467720458" duration="2378000" />
-      <workItem from="1400751293544" duration="789000" />
+      <workItem from="1400751293544" duration="996000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29764000" />
+    <option name="totallyTimeSpent" value="29971000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -550,16 +550,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/demo/select_ck.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="598" column="86" selection-start="26008" selection-end="26008" vertical-scroll-proportion="-31.892857" vertical-offset="10469" max-vertical-offset="11609">
+        <state line="74" column="91" selection-start="3971" selection-end="3971" vertical-scroll-proportion="-17.642857" vertical-offset="912" max-vertical-offset="5947">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/demo/select_ck.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="91" selection-start="3971" selection-end="3971" vertical-scroll-proportion="0.5691244" vertical-offset="912" max-vertical-offset="5947">
+        <state line="3" column="71" selection-start="101" selection-end="101" vertical-scroll-proportion="0.06666667" vertical-offset="0" max-vertical-offset="11609">
           <folding />
         </state>
       </provider>
