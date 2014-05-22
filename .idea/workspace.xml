@@ -76,8 +76,10 @@
       <file leaf-file-name="select_ck.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/select_ck.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="462" column="40" selection-start="19096" selection-end="19096" vertical-scroll-proportion="0.7380117" vertical-offset="8147" max-vertical-offset="11590">
-              <folding />
+            <state line="296" column="115" selection-start="10270" selection-end="10270" vertical-scroll-proportion="0.3520468" vertical-offset="5323" max-vertical-offset="11590">
+              <folding>
+                <element signature="n#style#0;n#input#2;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -411,12 +413,12 @@
       <workItem from="1400047602487" duration="23324000" />
       <workItem from="1400119557371" duration="3273000" />
       <workItem from="1400467720458" duration="2378000" />
-      <workItem from="1400751293544" duration="1264000" />
+      <workItem from="1400751293544" duration="1610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30239000" />
+    <option name="totallyTimeSpent" value="30585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -559,8 +561,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/select_ck.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="462" column="40" selection-start="19096" selection-end="19096" vertical-scroll-proportion="0.7380117" vertical-offset="8147" max-vertical-offset="11590">
-          <folding />
+        <state line="296" column="115" selection-start="10270" selection-end="10270" vertical-scroll-proportion="0.3520468" vertical-offset="5323" max-vertical-offset="11590">
+          <folding>
+            <element signature="n#style#0;n#input#2;n#div#0;n#li#0;n#ul#1;n#div#0;n#div#0;n#form#0;n#div#2;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
