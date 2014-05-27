@@ -9,7 +9,7 @@
     exports.name    = 'main.js';
     exports.version = '1.0';
 
-    var commonStr = 'J_catalog_',
+    var catalogStr = 'J_catalog_',
         dataStr = 'J_Data',
         num = 1,
         sumPage,
@@ -52,23 +52,30 @@
 
         var $page = Mustache.render(pageTemp.join(''), hash);
 
-        $('#' + commonStr + num).append($page);
+        $('#' + catalogStr + num).append($page);
 
         $('.container').data('page-'+num,true);
 
+        //渲染
         this.render();
     };
 
     Page.prototype.render = function(){
         var items = $('#' + dataStr + num).find('li'),
-            catalog = commonStr + num;
+            catalog = catalogStr + num;
 
         $.each(items, function(key, value) {
             if(key+1 > perPage){
                 $(value).hide();
-            };
+            }
         });
 
+        //绑定事件
+        this.bind(catalog,items);
+    };
+
+    Page.prototype.bind = function(catalog,items){
+        //页码跳转事件
         $('#' + catalog).delegate('.page .J_Page','click',function(){
             var $this = $(this),
                 $prePage = $('#' + catalog + ' .J_Preview'),
@@ -98,6 +105,7 @@
             }
         });
 
+        //'左箭头'事件
         $('#' + catalog).delegate('.page .J_Preview','click', function(){
             var $this = $(this),
                 $nextPage = $('#' + catalog + ' .J_Next');
@@ -131,6 +139,7 @@
             }
         });
 
+        //'右箭头'事件
         $('#' + catalog).delegate('.page .J_Next','click', function(){
             var $this = $(this),
                 $prePage = $('#' + catalog + ' .J_Preview');
@@ -167,26 +176,26 @@
 
     var page = new Page();
 
-    $('.cr-container input').click(function(){
-        var $this = $(this);
-        $this.siblings().removeClass('current');
-        $this.addClass('current');
-
-        num = $this.attr('data-num');
-        $('#' + commonStr + num).siblings().hide();
-        $('#' + commonStr + num).show();
-
-        sumPage = $('#' + dataStr + num).find('li').length;
-
-        if(sumPage > perPage && !($('.container').data('page-'+num))){
-            page.init();
-        }
-    });
-
     /**
      * 对外接口
      */
     exports.init = function() {
+        $('.cr-container input').click(function(){
+            var $this = $(this);
+            $this.siblings().removeClass('current');
+            $this.addClass('current');
+
+            num = $this.attr('data-num');
+            $('#' + catalogStr + num).siblings().hide();
+            $('#' + catalogStr + num).show();
+
+            sumPage = $('#' + dataStr + num).find('li').length;
+
+            if(sumPage > perPage && !($('.container').data('page-'+num))){
+                page.init();
+            }
+        });
+
         //首屏默认触发分页函数
         $('#select-img-1').trigger('click');
     };
