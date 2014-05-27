@@ -155,9 +155,10 @@ var AM;
                     rroot = /^\$/,
                     i, item, name, file;
 
-                var startIndex = window.location.href.indexOf('/');
-                var endIndex = window.location.href.lastIndexOf('/');
-                var preUrl = window.location.href.substring(startIndex,endIndex);
+                var location = window.location.href;
+                var startIndex = location.indexOf('/');
+                var endIndex = location.lastIndexOf('/');
+                var preUrl = location.substring(startIndex,endIndex);
 
                 for (i = 0; item = arr[i]; i++) {
                     var _item = item;
