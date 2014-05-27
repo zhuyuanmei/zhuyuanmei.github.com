@@ -80,11 +80,12 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/base/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="166" column="6" selection-start="4847" selection-end="4847" vertical-scroll-proportion="0.6946039" vertical-offset="896" max-vertical-offset="1767">
+            <state line="168" column="26" selection-start="4875" selection-end="4875" vertical-scroll-proportion="0.6573661" vertical-offset="0" max-vertical-offset="896">
               <folding>
                 <element signature="e#336#682#0" expanded="false" />
                 <element signature="e#744#1504#0" expanded="false" />
                 <element signature="e#1545#1835#0" expanded="false" />
+                <element signature="e#1887#4216#0" expanded="false" />
                 <element signature="e#2000#2777#0" expanded="false" />
                 <element signature="e#4274#4513#0" expanded="false" />
                 <element signature="e#4572#4846#0" expanded="false" />
@@ -450,12 +451,12 @@
       <workItem from="1400811801524" duration="1404000" />
       <workItem from="1400836854861" duration="3384000" />
       <workItem from="1401067734564" duration="2417000" />
-      <workItem from="1401157748419" duration="23809000" />
+      <workItem from="1401157748419" duration="23850000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62312000" />
+    <option name="totallyTimeSpent" value="62353000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -652,11 +653,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/base/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="166" column="6" selection-start="4847" selection-end="4847" vertical-scroll-proportion="0.6946039" vertical-offset="896" max-vertical-offset="1767">
+        <state line="168" column="26" selection-start="4875" selection-end="4875" vertical-scroll-proportion="0.6573661" vertical-offset="0" max-vertical-offset="896">
           <folding>
             <element signature="e#336#682#0" expanded="false" />
             <element signature="e#744#1504#0" expanded="false" />
             <element signature="e#1545#1835#0" expanded="false" />
+            <element signature="e#1887#4216#0" expanded="false" />
             <element signature="e#2000#2777#0" expanded="false" />
             <element signature="e#4274#4513#0" expanded="false" />
             <element signature="e#4572#4846#0" expanded="false" />
