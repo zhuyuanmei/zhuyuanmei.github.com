@@ -76,7 +76,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="114" selection-start="4472" selection-end="4472" vertical-scroll-proportion="-0.5714286" vertical-offset="1542" max-vertical-offset="2679">
+            <state line="128" column="59" selection-start="6030" selection-end="6030" vertical-scroll-proportion="-21.607143" vertical-offset="1827" max-vertical-offset="2679">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -89,7 +89,7 @@
       <file leaf-file-name="AM.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/base/AM.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="69" selection-start="3796" selection-end="3796" vertical-scroll-proportion="0.4" vertical-offset="2698" max-vertical-offset="9652">
+            <state line="158" column="55" selection-start="3668" selection-end="3668" vertical-scroll-proportion="0.11477273" vertical-offset="2901" max-vertical-offset="9652">
               <folding />
             </state>
           </provider>
@@ -434,15 +434,15 @@
       <workItem from="1400811801524" duration="1404000" />
       <workItem from="1400836854861" duration="3384000" />
       <workItem from="1401067734564" duration="2417000" />
-      <workItem from="1401157748419" duration="12208000" />
+      <workItem from="1401157748419" duration="12921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50711000" />
+    <option name="totallyTimeSpent" value="51424000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1040" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -623,7 +623,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="114" selection-start="4472" selection-end="4472" vertical-scroll-proportion="-0.5714286" vertical-offset="1542" max-vertical-offset="2679">
+        <state line="128" column="59" selection-start="6030" selection-end="6030" vertical-scroll-proportion="-21.607143" vertical-offset="1827" max-vertical-offset="2679">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -634,7 +634,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/base/AM.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="69" selection-start="3796" selection-end="3796" vertical-scroll-proportion="0.4" vertical-offset="2698" max-vertical-offset="9652">
+        <state line="158" column="55" selection-start="3668" selection-end="3668" vertical-scroll-proportion="0.11477273" vertical-offset="2901" max-vertical-offset="9652">
           <folding />
         </state>
       </provider>
