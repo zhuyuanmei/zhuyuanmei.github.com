@@ -64,19 +64,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/base/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="66" selection-start="5135" selection-end="5135" vertical-scroll-proportion="0.0" vertical-offset="1026" max-vertical-offset="3800">
+            <state line="136" column="83" selection-start="4274" selection-end="4274" vertical-scroll-proportion="-0.38181818" vertical-offset="2920" max-vertical-offset="3800">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="18" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.64319247" vertical-offset="915" max-vertical-offset="2679">
+            <state line="82" column="114" selection-start="4472" selection-end="4472" vertical-scroll-proportion="-25.0" vertical-offset="858" max-vertical-offset="2679">
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -108,9 +108,9 @@
         <option value="$PROJECT_DIR$/main.js" />
         <option value="$PROJECT_DIR$/utils/mustache.js" />
         <option value="$PROJECT_DIR$/base/jquery.js" />
-        <option value="$PROJECT_DIR$/base/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/base/AM.js" />
+        <option value="$PROJECT_DIR$/base/main.js" />
       </list>
     </option>
   </component>
@@ -439,15 +439,15 @@
       <workItem from="1400811801524" duration="1404000" />
       <workItem from="1400836854861" duration="3384000" />
       <workItem from="1401067734564" duration="2417000" />
-      <workItem from="1401157748419" duration="13716000" />
+      <workItem from="1401157748419" duration="15750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52219000" />
+    <option name="totallyTimeSpent" value="54253000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1040" extended-state="1" />
+    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -607,7 +607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="579" column="4" selection-start="19050" selection-end="19050" vertical-scroll-proportion="1.5181818" vertical-offset="9665" max-vertical-offset="11115">
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -615,13 +615,6 @@
     <entry file="file://$PROJECT_DIR$/demo/cases/select_ck.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.67938024" vertical-offset="570" max-vertical-offset="11590">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/base/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="66" selection-start="5135" selection-end="5135" vertical-scroll-proportion="0.0" vertical-offset="2920" max-vertical-offset="3800">
           <folding />
         </state>
       </provider>
@@ -635,12 +628,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="18" selection-start="4157" selection-end="4157" vertical-scroll-proportion="0.64319247" vertical-offset="915" max-vertical-offset="2679">
+        <state line="82" column="114" selection-start="4472" selection-end="4472" vertical-scroll-proportion="-25.0" vertical-offset="858" max-vertical-offset="2679">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/base/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="136" column="83" selection-start="4274" selection-end="4274" vertical-scroll-proportion="-0.38181818" vertical-offset="2920" max-vertical-offset="3800">
+          <folding />
         </state>
       </provider>
     </entry>
