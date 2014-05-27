@@ -75,6 +75,7 @@
     };
 
     Page.prototype.bind = function(catalog,items){
+        var _self = this;
         //Ò³ÂëÌø×ªÊÂ¼þ
         $('#' + catalog).delegate('.page .J_Page','click',function(){
             var $this = $(this),
@@ -87,13 +88,7 @@
 
                 var actPage = $this.attr('data-page');
 
-                $.each(items, function(key, value) {
-                    if((actPage-1)*perPage+1 <= key+1 && key+1 <= actPage*perPage){
-                        $(value).show();
-                    }else{
-                        $(value).hide();
-                    }
-                });
+                _self.showItems(items, actPage);
 
                 $prePage.attr('data-page',actPage);
 
@@ -118,20 +113,9 @@
 
                 $nextPage.attr('data-page',curPage);
 
-                $.each(items, function(key, value) {
-                    if((curPage-1)*perPage+1 <= key+1 && key+1 <= curPage*perPage){
-                        $(value).show();
-                    }else{
-                        $(value).hide();
-                    }
-                });
+                _self.showItems(items, curPage);
 
-                $.each($('#' + catalog + ' .J_Page'), function(key, value) {
-                    if(parseInt($(value).attr('data-page')) === curPage){
-                        $(value).siblings().removeClass('current');
-                        $(value).addClass('current');
-                    }
-                });
+                _self.showPage(catalog, curPage);
 
                 if(curPage === 1){
                     $this.addClass('disabled');
@@ -152,24 +136,32 @@
 
                 $prePage.attr('data-page',curPage);
 
-                $.each(items, function(key, value) {
-                    if((curPage-1)*perPage+1 <= key+1 && key+1 <= curPage*perPage){
-                        $(value).show();
-                    }else{
-                        $(value).hide();
-                    }
-                });
+                _self.showItems(items, curPage);
 
-                $.each($('#' + catalog + ' .J_Page'), function(key, value) {
-                    if(parseInt($(value).attr('data-page')) === curPage){
-                        $(value).siblings().removeClass('current');
-                        $(value).addClass('current');
-                    }
-                });
+                _self.showPage(catalog, curPage);
 
                 if(curPage === Math.ceil(sumPage / perPage)){
                     $this.addClass('disabled');
                 }
+            }
+        });
+    };
+
+    Page.prototype.showItems = function(items, curPage){
+        $.each(items, function(key, value) {
+            if((curPage-1)*perPage+1 <= key+1 && key+1 <= curPage*perPage){
+                $(value).show();
+            }else{
+                $(value).hide();
+            }
+        });
+    };
+
+    Page.prototype.showPage = function(catalog, curPage){
+        $.each($('#' + catalog + ' .J_Page'), function(key, value) {
+            if(parseInt($(value).attr('data-page')) === curPage){
+                $(value).siblings().removeClass('current');
+                $(value).addClass('current');
             }
         });
     };

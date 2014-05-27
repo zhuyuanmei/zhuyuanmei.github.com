@@ -64,32 +64,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/base/main.js">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="31" selection-start="5527" selection-end="5527" vertical-scroll-proportion="0.40625" vertical-offset="206" max-vertical-offset="1102">
+            <state line="16" column="52" selection-start="505" selection-end="505" vertical-scroll-proportion="-0.6785714" vertical-offset="285" max-vertical-offset="2679">
               <folding>
-                <element signature="e#336#682#0" expanded="false" />
-                <element signature="e#744#1504#0" expanded="false" />
-                <element signature="e#1545#1835#0" expanded="false" />
-                <element signature="e#1887#5437#0" expanded="false" />
-                <element signature="e#1974#2990#0" expanded="false" />
-                <element signature="e#3084#4180#0" expanded="false" />
-                <element signature="e#4271#5429#0" expanded="false" />
-                <element signature="e#5472#5495#0" expanded="false" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/base/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="28" selection-start="694" selection-end="700" vertical-scroll-proportion="-16.285715" vertical-offset="0" max-vertical-offset="2679">
+            <state line="166" column="6" selection-start="4847" selection-end="4847" vertical-scroll-proportion="0.6946039" vertical-offset="896" max-vertical-offset="1767">
               <folding>
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#336#682#0" expanded="false" />
+                <element signature="e#744#1504#0" expanded="false" />
+                <element signature="e#1545#1835#0" expanded="false" />
+                <element signature="e#2000#2777#0" expanded="false" />
+                <element signature="e#4274#4513#0" expanded="false" />
+                <element signature="e#4572#4846#0" expanded="false" />
+                <element signature="e#4881#4904#0" expanded="false" />
+                <element signature="e#4935#5527#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -450,12 +450,12 @@
       <workItem from="1400811801524" duration="1404000" />
       <workItem from="1400836854861" duration="3384000" />
       <workItem from="1401067734564" duration="2417000" />
-      <workItem from="1401157748419" duration="19564000" />
+      <workItem from="1401157748419" duration="23809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58067000" />
+    <option name="totallyTimeSpent" value="62312000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -479,7 +479,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14430244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14430244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -641,7 +641,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="28" selection-start="694" selection-end="700" vertical-scroll-proportion="-16.285715" vertical-offset="0" max-vertical-offset="2679">
+        <state line="16" column="52" selection-start="505" selection-end="505" vertical-scroll-proportion="-0.6785714" vertical-offset="285" max-vertical-offset="2679">
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -652,16 +652,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/base/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="31" selection-start="5527" selection-end="5527" vertical-scroll-proportion="0.40625" vertical-offset="206" max-vertical-offset="1102">
+        <state line="166" column="6" selection-start="4847" selection-end="4847" vertical-scroll-proportion="0.6946039" vertical-offset="896" max-vertical-offset="1767">
           <folding>
             <element signature="e#336#682#0" expanded="false" />
             <element signature="e#744#1504#0" expanded="false" />
             <element signature="e#1545#1835#0" expanded="false" />
-            <element signature="e#1887#5437#0" expanded="false" />
-            <element signature="e#1974#2990#0" expanded="false" />
-            <element signature="e#3084#4180#0" expanded="false" />
-            <element signature="e#4271#5429#0" expanded="false" />
-            <element signature="e#5472#5495#0" expanded="false" />
+            <element signature="e#2000#2777#0" expanded="false" />
+            <element signature="e#4274#4513#0" expanded="false" />
+            <element signature="e#4572#4846#0" expanded="false" />
+            <element signature="e#4881#4904#0" expanded="false" />
+            <element signature="e#4935#5527#0" expanded="false" />
           </folding>
         </state>
       </provider>
