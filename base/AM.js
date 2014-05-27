@@ -155,6 +155,10 @@ var AM;
                     rroot = /^\$/,
                     i, item, name, file;
 
+                var startIndex = window.location.href.indexOf('/');
+                var endIndex = window.location.href.lastIndexOf('/');
+                var preUrl = window.location.href.substring(startIndex,endIndex);
+
                 for (i = 0; item = arr[i]; i++) {
                     var _item = item;
 
@@ -171,7 +175,7 @@ var AM;
                         } else {
                             item = item.split('.');
                             name = item.pop();
-                            name = 'zhuyuanmei.github.com/base/' + name + '.js';
+                            name = preUrl + '/base/' + name + '.js';
                         }
 
                         file = [data.base, '/', name, data.version];
