@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="icon" href="http://img02.taobaocdn.com/tps/i2/T1bZNxXjXjXXXXXXXX.png" type="image/x-icon" />
+    <title>淘宝物流-订单管理平台</title>
+    <meta name="keywords"
+          content="淘宝,掏宝,物流宝,网上购物,C2C,在线交易,交易市场,网上交易,交易市场,网上买,网上卖，购物网站,团购,网上贸易,安全购物,电子商务,放心买,供应,买卖信息,网店,一口价,拍卖,网上开店,网络购物,打折,免费开店,网购,频道,店铺"/>
+
+    <link href="http://a.tbcdn.cn/??p/global/1.0/global-min.css?t=2011062720100214.css" type="text/css" rel="stylesheet" />
+    <link href="http://a.tbcdn.cn//apps/wlbmywlb/OMS/page/goods/goods-min.css" type="text/css" rel="stylesheet" />
+
+    <link href="http://assets.daily.taobao.net//apps/wlbmywlb/OMS/base/??base-min.css,header-min.css,footer-min.css?t=20120314.css" rel="stylesheet" />
+    <link href="http://assets.daily.taobao.net//apps/wlbmywlb/OMS/widget/??msg-min.css,pagination-min.css,subnav-min.css,loading-min.css,pop-min.css,table-min.css,field-min.css,query-min.css,search-min.css?t=20120314.css" rel="stylesheet" />
+
+    <script src="http://a.tbcdn.cn/??s/kissy/1.3.0/kissy-min.js,p/global/1.0/global-min.js"></script>
+    <!--script src="http://a.tbcdn.cn/tbra/1.0/??tbra-aio.js,build/widget/simplecalendar-min.js?t_1=1&t=200911111751.js"></script-->
+    <script src="http://a.tbcdn.cn/tbra/1.0/tbra-aio.js"></script>
+    <script src="http://a.tbcdn.cn/tbra/1.0/build/widget/simplecalendar-min.js?t_1=1&t=200911111751.js"></script>
+    <script src="http://g.tbcdn.cn/tm/wuliu-inventory/1.0.2/base/wlb.js"></script>
+
+    <link rel="stylesheet" href="http://g.tbcdn.cn/??mui/form/1.0.2/form.css,mui/button/1.0.6/btn.css,mui/table/1.0.0/table.css">
+
+    <style type="text/css">
+        .sub-sub-nav{
+            margin:10px 0px;
+        }
+        .sub-sub-nav ul{
+            background:url(http://img02.taobaocdn.com/tps/i2/T1RwOqXhdLXXXXXXXX-1-33.png) repeat-x;
+            height:30px;
+            padding-left:27px;
+            overflow:hidden;
+        }
+        .sub-sub-nav  hr{
+            margin-top:0px;
+        }
+        .sub-sub-nav li{
+            float: left;
+            height: 21px;
+            margin-left: 15px;
+            padding:0px 10px;
+            position: relative;
+        }
+        .sub-sub-nav span,.sub-sub-nav s,.sub-sub-nav .selected{
+            background:url(http://img03.taobaocdn.com/tps/i3/T1ssluXhVyXXXXXXXX-5-100.png) no-repeat;
+            background-position:1000px 1000px;
+        }
+        .sub-sub-nav a{
+            background-position:0px -510px;
+            line-height:15px;
+            vertical-align:middle;
+        }
+        .sub-sub-nav a:hover{
+            text-decoration:none;
+        }
+        .sub-sub-nav span{
+            background-position:0px -510px;
+            color:#000;
+        }
+        .sub-sub-nav .selected .l,.sub-sub-nav .selected .r{
+            height: 21px;
+            position: absolute;
+            top: 0;
+            width: 4px;
+        }
+        .sub-sub-nav .selected span{
+            color:#fff;
+        }
+        .sub-sub-nav .selected .l{
+            background-position: -1px -78px;
+            left: 0;
+        }
+        .sub-sub-nav .selected .r{
+            background-position: 0 -57px;
+            right: 0px;
+        }
+        .sub-sub-nav .selected{
+            background-repeat:repeat-x;
+            background-position:0px -36px;
+        }
+        .sub-sub-nav .selected a{
+            color:#fff;
+        }
+        .len-8{
+            width:8%;
+        }
+
+
+
+        .ck-mod{
+            width:650px;
+            margin:0px auto 10px;
+        }
+        .ck-mod-hd{
+            padding-top:10px;
+            border-bottom:1px dashed #ccc;
+        }
+        .ck-mod-hd .mui-form-label{
+            width:80px;
+            text-align: left;
+        }
+
+        .title{
+            margin-bottom: 10px;
+            font-weight: bold;
+            color:#ccc;
+        }
+        .ck-mod-bd{
+            padding:10px 0;
+            overflow: hidden;
+        }
+        .ck-mod-bd li{
+            height:28px;
+        }
+        .ck-mod-bd-l{
+            float:left;
+            width:400px;
+            border-right:1px dashed #ccc;
+        }
+        .ck-mod-bd-l ul{
+            padding-left:20px;
+            width: 355px;
+            height: 350px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+        }
+        .ck-mod-bd-r{
+            float:left;
+            padding-left: 25px;
+            width:220px;
+        }
+        .ck-mod-bd-r ul{
+            height: 350px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+        }
+        .ck-mod-bd-r i{
+            float:right;
+            width:16px;
+            height:16px;
+            background: url(http://img02.taobaocdn.com/tps/i2/T1CdBMFkNeXXb23GA.-132-41.png) no-repeat -32px -25px;
+            cursor: pointer;
+        }
+        .ck-mod-ft{
+            text-align: center;
+        }
+        .ck-mod-ft button{
+            padding:0 30px;
+        }
+        .ck-mod-ft .mui-btn-l-primary{
+            margin-right:10px;
+        }
+
+        .ck-mod-bd-r span{
+            width:200px;
+            _width:180px;
+            word-break:break-all;
+            display:inline-block;
+        }
+    </style>
+
+
+</head>
+<body class="W950 home">
+
+<div id="site-nav">
+    <div id="site-nav-bd">
+        <p class="login-info">
+            <script>TB.Global.writeLoginInfo();</script>
+        </p>
+        <ul class="quick-menu">
+            <li class="home"><a href="http://www.taobao.com/">淘宝网首页</a></li>
+            <li><a href="http://wuliubao.taobao.com/item/item_list.htm">我的物流宝</a></li>
+            <li class="last"><a href="http://bbs.taobao.com/catalog/485501.htm">物流论坛</a></li>
+        </ul>
+    </div>
+</div>
+<script>TB.Global.init();</script>
+
+<div id="page">
+<div id="header">
+    <div class="wrapper">
+        <h1 id="logo">
+            <a class="wlb-logo" href="http://e56.taobao.com"><img height="40" width="200" alt="淘宝物流" src="http://img03.taobaocdn.com/tps/i3/T1fid7XeBBXXXXXXXX-200-40.png"></a>
+            <span class="wlb-title"><img height="16" width="140" alt="运筹帷幄，智慧物流" src="http://img02.taobaocdn.com/tps/i2/T1wN87Xk8zXXXXXXXX-140-16.png"></span></h1>
+    </div>
+</div>
+
+<div id="nav">
+    <ul class="nav-skin">
+        <li class="home ">
+            <a href="/home_page.htm">
+		   <span>
+			  首页
+		   </span>
+            </a>
+        </li>
+        <li class="home ">
+            <a href="/item/item_list.htm">
+		   <span>
+			  商品管理
+		   </span>
+            </a>
+        </li>
+        <li class="home selected">
+            <a href="/inventory/inventory_status.htm">
+		   <span>
+			  库存管理
+		   </span>
+            </a>
+        </li>
+        <li class="home ">
+            <a href="/order/trade_order_list.htm">
+		   <span>
+			  订单管理
+		   </span>
+            </a>
+        </li>
+        <li class="home ">
+            <a href="/charge/chargeInfo.htm">
+		   <span>
+			  费用管理
+		   </span>
+            </a>
+        </li>
+        <li class="home ">
+            <a href="/service/order_schedule_rule.htm">
+		   <span>
+			  服务管理
+		   </span>
+            </a>
+        </li>
+        <li class="home ">
+            <a href="/statistics/inventoryTurnoverDetail.htm">
+		   <span>
+			  统计报表
+		   </span>
+            </a>
+        </li>
+        <li class="home fright ">
+            <a href="/helpcenter/tpHelpCenter.htm">
+			<span>
+    		 帮助
+    		</span>
+            </a>
+        </li>
+        <li class="home ">
+            <a href="/fee/audit_password.htm">
+		   <span>
+			 设置
+		   </span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<link href="http://assets.daily.taobao.net///apps/wlbmywlb/OMS/page/stock/stock-min.css" rel="stylesheet">
+<div id="Content" class="storage">
+<div id="Content" class="storage">
+    <div class="manage stock order">
+        <div class="sub-nav">
+            <ul>
+                <li class="here"><a href="/inventory/inventory_status.htm">库存状态</a></li>
+                <li><a href="/inventory/stockInList.htm">入库单</a></li>
+                <li><a href="/inventory/stockOutList.htm">出库单</a></li>
+                <li><a href="/inventory/transferring_order_list.htm">调拨单</a></li>
+                <li><a href="/inventory/inventory_check.htm">盘点单</a></li>
+                <li><a href="/inventory/adjustment_order_list.htm">调整单</a></li>
+                <!--<li><a href="/inventory/inventory_change.htm">库存变更</a></li>-->
+            </ul>
+        </div>
+        <div class="sub-sub-nav">
+            <ul>
+                <li class="selected"><s class="l"></s><s class="r"></s><a href="#"><span>我的商品</span></a></li>
+                <li><s class="l"></s><s class="r"></s><a href="/jmi/supply_inventory_proxy.htm#"><span>我供货的商品</span></a></li>
+                <li><s class="l"></s><s class="r"></s><a href="/jmi/distribute_inventory_proxy.htm#"><span>我代销的商品</span></a></li>
+            </ul>
+            <hr>
+        </div>
+        <div class="stock-status" style="margin-top:12px;">
+            <form action="inventory_status.htm" name="inventoryStatusListQuery" method="post" onsubmit="onSub()">
+                <div class="query clearfix">
+                    <div class="J_SearchBox" >
+                        <ul class="search-tab clearfix" id="j_SearchTab" >
+                            <li class="search-title">
+                                其他查询条件：
+                            </li>
+                            <li><input type="radio" name="search_way" value="1"  checked="checked"  class="j_SearchWay"> 按仓库查询</li>
+                            <li><input type="radio" name="search_way" value="2"  class="j_SearchWay"> 按商品查询</li>
+                        </ul>
+                        <ul class="search-list pl-100" id="j_SearchList">
+                            <li class="j_SearchDiv" >
+                                <div class="field-bd" > 仓库：
+                				    <span class="J_SelectStoreText" ></span>																																																												</span>
+                                    <input type="hidden" class="J_SelectStoreResult" name="storeCode" value=""/>
+                                    <input type="hidden" class="J_ShowStoreResults" name="storeNameList" value=""/>
+                                    <input type="button" class="J_SelectStoreBtn" value="选择仓库" style="color:red;"/>
+                                </div>
+                            </li>
+                            <li class="j_SearchDiv"  style="display:none" >
+                                <label>商品编码：</label>
+                                <input type="text" name="itemCode" value=""/>
+                                <label>商品名称：</label>
+                                <input type="text" name="name" value=""/>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="J_SearchBox pl-100"  style="display:none;"   >
+                        <label>商品编码：</label>
+                        <input type="text" value="" name="itemCode1">
+                        <label>商品名称：</label>
+                        <input type="text" value="" name="name1">
+                    </div>
+                    <div class="search-submit"><button type="submit">查询</button></div>
+                    <a class="export-stock" id="J_ExportExcel" href="#">导出库存状态</a></div>
+                <table class="list-table">
+                    <colgroup>
+                        <col class="len-15" />
+                        <col class="len-25" />
+                        <col class="len-20" />
+                        <col class="len-10" />
+                        <col class="len-10" />
+                        <col class="len-10" />
+                        <col />
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>
+                            商品编码
+                        </th>
+                        <th>
+                            商品名称
+                        </th>
+                        <th class="right">
+                            仓库：
+                        </th>
+                        <th>
+                            可销库存
+                        </th>
+                        <th>
+                            冻结库存
+                        </th>
+                        <th>
+                            在途库存
+                        </th>
+                        <th>
+                            <select id="J_StockType">
+                                <option value="ww">不良品</option>
+                                <option value="xx">残次</option>
+                                <option value="yy">机损</option>
+                                <option value="zz">箱损</option>
+                            </select>
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="/item/item_detail.htm?item_id=333333333334600" class="h-link">TEST</a>
+                        </td>
+                        <td>
+                            <a href="/item/item_detail.htm?item_id=333333333334600" class="h-link">冯强伟测试</a>
+                        </td>
+                        <td class="right">
+
+                            淘宝物流杭州B102仓库													:
+                        </td>
+                        <td>
+                            460
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td>
+                            0
+                        </td>
+                        <td class="j_Type">
+                            <span>0</span>
+                            <span style="display:none">0</span>
+                            <span style="display:none">0</span>
+                            <span style="display:none">0</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+                <!--翻页结束-->
+            </form>
+        </div>
+        <form action="inventory_status_export.do" name="exportExcel" method="post">
+            <input name='_tb_token_' type='hidden' value='0dw5tTJn'>
+            <input type="hidden" name="action" value="" />
+            <input type="hidden" name="itemCode" value="" />
+            <input type="hidden" name="name" value="" />
+            <input type="hidden" name="storeCode" value="DZZC-0002" />
+            <input type="hidden" id="J_SearchWayInput" name="search_way" value="1"/>
+            <input type="hidden" name="search_goods" value="1"/>
+            <input type="hidden" value="" name="itemCode1">
+            <input type="hidden" value="" name="name1">
+        </form>
+    </div>
+</div>
+<textarea style="display:none;" id="J_SelectStoreTemp">
+    <!--<div>-->
+        <!--<form id="J_SelectStoreForm">-->
+            <!--<ul class="field field-h8">-->
+                <!--<li>-->
+                    <!--<div class="field-hd">-->
+                        <!--<label>仓库所在地：</label>-->
+                    <!--</div>-->
+                    <!--<div class="field-bd">-->
+                        <!--<div id="J_SelectCity"></div>-->
+                        <!--<input type="hidden" id="J_SelectCityResult" name="city">-->
+                    <!--</div>-->
+                <!--</li>-->
+
+                <!--<li>-->
+                    <!--<div class="field-hd">-->
+                        <!--<label>选择仓库：</label>-->
+                    <!--</div>-->
+                    <!--<div class="field-bd">-->
+                        <!--<select id="J_SelectStoreCon" class="store-con" size="12">-->
+                        <!--</select>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<div class="operation"><button id="J_SelectOkBtn" type="button">确定</button><button id="J_SelectCancleBtn" type="button">取消</button></div>-->
+        <!--</form>-->
+    <!--</div>-->
+    <div class="ck-mod">
+    <form method="post" action="" id="J_SelectStoreForm">
+    <div class="ck-mod-hd">
+        <ul class="mui-form-bd">
+            <li class="mui-form-row">
+                <label class="mui-form-label">仓库所在地:</label>
+                <div class="mui-form-right">
+                    <div id="J_SelectCity"></div>
+                </div>
+                <input type="hidden" id="J_SelectCityResult" name="city">
+            </li>
+        </ul>
+    </div>
+    <div class="ck-mod-bd">
+        <div class="ck-mod-bd-l">
+           <p class="title">选择仓库</p>
+            <ul id="J_SelectStoreCon">
+                <li><label><input data-id="1" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库杭州仓库仓库">杭州余杭仓前仓库仓库仓库杭州余杭仓前仓库...</label></li>
+                <li><label><input data-id="2" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="aaaaaqqqqqqqqqqqqq111111111">杭州余杭仓前仓库仓库仓库2</label></li>
+                <li><label><input data-id="3" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库3">杭州余杭仓前仓库仓库仓库3</label></li>
+                <li><label><input data-id="4" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库4">杭州余杭仓前仓库仓库仓库4</label></li>
+                <li><label><input data-id="5" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库5">杭州余杭仓前仓库仓库仓库5</label></li>
+                <li><label><input data-id="6" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库-商家仓库1">杭州余杭仓前仓库仓库仓库-商家仓库1</label></li>
+                <li><label><input data-id="7" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库-商家仓库2">杭州余杭仓前仓库仓库仓库-商家仓库2</label></li>
+                <li><label><input data-id="8" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库-商家仓库3">杭州余杭仓前仓库仓库仓库-商家仓库3</label></li>
+                <li><label><input data-id="9" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库-商家仓库4">杭州余杭仓前仓库仓库仓库-商家仓库4</label></li>
+                <li><label><input data-id="10" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库6">杭州余杭仓前仓库仓库仓库6</label></li>
+                <li><label><input data-id="11" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库7">杭州余杭仓前仓库仓库仓库7</label></li>
+                <li><label><input data-id="12" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库8">杭州余杭仓前仓库仓库仓库8</label></li>
+                <li><label><input data-id="13" data-selectFlag="true" type="checkbox" name="checkbox_st" class="mui-form-checkbox" value="杭州余杭仓前仓库仓库仓库9">杭州余杭仓前仓库仓库仓库9</label></li>
+                </ul>
+           </div>
+            <div class="ck-mod-bd-r">
+                <p class="title">已选择仓库</p>
+                <ul id="J_SelectedList">
+                </ul>
+            </div>
+    </div>
+     <div class="ck-mod-ft">
+        <a class="mui-btn-l-primary" id="J_SelectOkBtn" href="javascript:;">确定</a>
+        <a class="mui-btn-l" id="J_SelectCancleBtn" href="javascript:;">取消</a>
+    </div>
+    </form>
+    </div>
+</textarea>
+<script>
+    KISSY.use('wlb-excel', function(S, Excel){
+                var DOM = S.DOM, Event = S.Event;
+                var sTriggers = DOM.query('.j_SearchWay'),
+                //搜索选择radio
+                        sInput = DOM.get('#J_SearchWayInput'),
+                        sTriggerBtn = DOM.query('.J_SearchGoods'),
+                        sDivs = DOM.query('.j_SearchDiv'),
+                //搜索区域
+                        sTlen = sTriggers.length,
+                        sBox = DOM.query('.J_SearchBox'),
+                        sDlen = sDivs.length;
+                Event.on(sTriggers, 'click', function(){
+                            for(var i=0; i<sTlen; i++){
+                                if(sTriggers[i].checked == true){
+                                    DOM.show(sDivs[i]);
+                                    sInput.value = i;
+                                }
+                                else{
+                                    DOM.hide(sDivs[i]);
+                                }
+                            }
+                        }
+                );
+                Event.on(sTriggerBtn, 'click', function(){
+                            for(var i=0,len = sTriggerBtn.length; i<len; i++){
+                                if(sTriggerBtn[i].checked == true){
+                                    DOM.show(sBox[i]);
+                                }
+                                else{
+                                    DOM.hide(sBox[i]);
+                                }
+                            }
+                            document.forms["inventoryStatusListQuery"].submit();
+                        }
+                );
+                var bindChange = function(id){
+                            var select = DOM.get(id),
+                                    table = DOM.parent(select, 'table');
+                            if(!select || !table)
+                                return;
+                            Event.on(select, 'change', function(){
+                                        var index = this.selectedIndex;
+                                        tds = DOM.query('.j_Type', table);
+                                        S.each(tds, function(td){
+                                                    var spans = DOM.children(td,'span'),
+                                                            span = spans[index];
+                                                    //突出变化效果
+                                                    DOM.css(span,'color','#f00');
+                                                    setTimeout(function(){
+                                                                DOM.css(span,'color','');
+                                                            }
+                                                            ,500);
+                                                    DOM.hide(spans);
+                                                    DOM.show(span);
+                                                }
+                                        );
+                                    }
+                            );
+                        }
+                        ;
+                bindChange('#J_StockType');
+                Excel.exPort();
+                S.all(".j_MutualGroupOneText").each(function(item){
+                            item.on("focusin", function(e){
+                                        S.query(".j_MutualGroupTwoSelect").each(function(item){
+                                                    item.selectedIndex = 0;
+                                                }
+                                        );
+                                    }
+                            );
+                        }
+                );
+                S.all(".j_MutualGroupTwoSelect").each(function(item){
+                            item.on("focusin", function(e){
+                                        S.all(".j_MutualGroupOneText").each(function(item){
+                                                    item.val("");
+                                                }
+                                        );
+                                    }
+                            );
+                        }
+                );
+            }
+    );
+</script>
+<script src="http://g.tbcdn.cn/mui/seed/1.1.4/seed.js" ></script>
+<script src="http://g.tbcdn.cn/tm/wuliu-inventory/1.0.5/store/selectstore.js"></script>
+<link href="http://g.tbcdn.cn/tm/wuliu-inventory/1.0.5/store/selectstore.css" rel="stylesheet">
+<script>
+    KISSY.use('selectstore', function(S, SelectStore){
+        var selectStore = new SelectStore({
+            storeUrl: 'ShowStoreListForUser.do?_input_charset=UTF-8',
+            showType: 'new'
+        });
+
+    });
+</script>
+</div>
+
+<div id="footer">
+    <div id="copyright">
+        <!-- foot links from tms start -->
+        <p id="footer-tmallinfo">
+            <a href="http://www.tmall.com/go/chn/mall/zhaoshang_produce.php" target="_blank">关于淘宝商城</a>
+            <a href="http://service.tmall.com/support/tmall/tmallHelp.htm" target="_blank">帮助中心</a>
+            <a href="http://www.taobao.com/sitemap.php" target="_blank">网站地图</a>
+            <a href="http://job.taobao.com/" target="_blank">诚聘英才</a>
+            <a href="http://www.taobao.com/about/contact.php" target="_blank">联系我们</a>
+            <a href="http://www.taobao.com/about/copyright.php">版权说明</a>
+        </p>
+        <p id="footer-otherlink">
+            <a target="_blank" href="http://page.china.alibaba.com/shtml/about/ali_group1.shtml">阿里巴巴集团</a>：
+            阿里巴巴网络 - <a target="_blank" href="http://china.alibaba.com/">中国站</a> <a target="_blank"    href="http://www.alibaba.com/">国际站</a> <a target="_blank" href="http://www.alibaba.co.jp/">日文站</a> |
+            <a target="_blank" href="http://www.taobao.com/">淘宝网</a> |
+            <a target="_blank" href="http://www.alipay.com/">支付宝</a> |
+            <a target="_blank" href="http://www.yahoo.com.cn/">中国雅虎</a> |
+            <a target="_blank" href="http://www.koubei.com/">口碑网</a> |
+            <a target="_blank" href="http://taoke.alimama.com/">淘宝联盟</a> |
+            <a target="_blank" href="http://www.aliresearch.com/">集团研究中心</a> |
+            <a href="http://tianxia.taobao.com/" target="_blank">淘宝天下</a> |
+            <a href="http://hitao.taobao.com/" target="_blank">快乐淘宝</a> |
+            <a href="http://www.taohua.com/" target="_blank">淘花网</a>
+        </p>
+        <p>Copyright&nbsp;2003-2012, 版权所有TAOBAO.COM <br />增值电信业务经营许可证：浙B2-20080224</p>
+        <!-- foot links from tms end -->
+    </div>
+</div>
+</div>
+</body>
+</html>

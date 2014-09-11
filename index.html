@@ -3,8 +3,8 @@
   <head>
     <title>前端札记-仅限webkit内核Browse</title>
     <meta charset="utf-8"/>
-    <!--<meta name="viewport" content="width=500px, initial-scale=0.64">-->
-    <link href="main.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/coffee_2.png">
+    <link href="base/main.css" rel="stylesheet">
   </head>
   <body>
 	<div class="container">
@@ -24,22 +24,39 @@
 				<div id="J_catalog_1">
 					<p class="chapter">CSS3</p>
 					<ul id="J_Data1">
-						<li><a href="css3/move-eye.html" target="_blank">eyes转动</a></li>
-						<li><a href="css3/adjust-width.html" target="_blank">宽度自适应</a></li>
-						<li><a href="css3/earth.html" target="_blank">地球仪自传</a></li>
-                        <li><a href="css3/shadow.html" target="_blank">各类shadows</a></li>
-                        <li><a href="css3/write-duolaamen.html" target="_blank">制作dolaamon</a></li>
+						<li><a href="demo/css3/move-eye.html" target="_blank">eyes转动</a></li>
+                        <li><a href="demo/css3/adjust-width.html" target="_blank">宽度自适应</a></li>
+                        <li><a href="demo/css3/earth.html" target="_blank">地球仪自传</a></li>
+                        <li><a href="demo/css3/shadow.html" target="_blank">各类shadows</a></li>
+                        <li><a href="demo/css3/write-duolaamen.html" target="_blank">制作dolaamon</a></li>
+
+                        <li><a href="demo/css3/align-center.html" target="_blank">竖直高度自适应</a></li>
+                        <li><a href="demo/css3/adjust-width.html" target="_blank">宽度自适应-2</a></li>
+                        <li><a href="demo/css3/earth.html" target="_blank">地球仪自传-2</a></li>
+                        <li><a href="demo/css3/shadow.html" target="_blank">各类shadows-2</a></li>
+                        <li><a href="demo/css3/write-duolaamen.html" target="_blank">制作dolaamon-2</a></li>
+
+                        <li><a href="demo/css3/move-eye.html" target="_blank">eyes转动-3</a></li>
+                        <li><a href="demo/css3/adjust-width.html" target="_blank">宽度自适应-3</a></li>
+                        <li><a href="demo/css3/earth.html" target="_blank">地球仪自传-3</a></li>
+                        <li><a href="demo/css3/shadow.html" target="_blank">各类shadows-3</a></li>
+                        <li><a href="demo/css3/write-duolaamen.html" target="_blank">制作dolaamon-3</a></li>
+
+                        <li><a href="demo/css3/move-eye.html" target="_blank">eyes转动-4</a></li>
+                        <li><a href="demo/css3/adjust-width.html" target="_blank">宽度自适应-4</a></li>
 					</ul>
 				</div>
 				<div id="J_catalog_2" style="display:none;">
 					<p class="chapter">HTML5</p>
 					<ul id="J_Data2">
-						<li><a href="html5/drag.html" target="_blank">简易拖拽效果</a></li>
+						<li><a href="demo/html5/drag.html" target="_blank">简易拖拽效果</a></li>
+                        <li><a href="demo/html5/video.html" target="_blank">video 效果</a></li>
 					</ul>
 				</div>
 				<div id="J_catalog_3" style="display:none;">
 					<p class="chapter">JavaScript</p>
 					<ul id="J_Data3">
+<<<<<<< HEAD
 						<li><a href="js/clock.html" target="_blank">计时器</a></li>
 						<li><a href="js/array-sort.html" target="_blank">数组排序</a></li>
 						<li><a href="js/JSON-stringify.html" target="_blank">JSON用法</a></li>
@@ -47,6 +64,15 @@
 						<li><a href="js/insert-elements.html" target="_blank">高效插入元素</a></li>
 						<li><a href="js/setTimeout.html" target="_blank">setTimeout示例</a></li>
 						<li><a href="js/same-element.html" target="_blank">收集数组重复元素</a></li>
+=======
+                        <li><a href="demo/js/maze-tree.html" target="_blank">Maze Tree</a></li>
+						<li><a href="demo/js/array-sort.html" target="_blank">数组排序</a></li>
+						<li><a href="demo/js/JSON-stringify.html" target="_blank">JSON用法</a></li>
+						<li><a href="demo/js/js-dom.html" target="_blank">DOM元素操作</a></li>
+						<li><a href="demo/js/insert-elements.html" target="_blank">高效插入元素</a></li>
+						<li><a href="demo/js/setTimeout.html" target="_blank">setTimeout示例</a></li>
+						<li><a href="demo/js/same-element.html" target="_blank">收集数组重复元素</a></li>
+>>>>>>> 93b53b528c4a499a1144e25d1a64a263837919c8
 					</ul>
 				</div>
 				<div id="J_catalog_4" style="display:none;">
@@ -110,84 +136,11 @@
 		<footer id="footer"></footer>
 	</div>
   </body>
-  <script type="text/javascript" src="http://js2.citysbs.com/0.7.1.37/forum/lib/jquery.js?v=0.7.2.013103"></script>
-  <script type="text/javascript" src="http://js2.citysbs.com/0.7.5.50/forum/lib/mustache.js?v=0.7.5.0508"></script>
+  <script type="text/javascript" src="base/AM.js"></script>
   <script type="text/javascript">
-    var commonStr = "#J_catalog_",
-        num = 1,
-        maxPage;
-
-    var pageTemp = [
-            '<div class="page">',
-            '{{#PreviewFlag}}',
-            '<a href="/page6" class="J_Preview current">&lt;</a>',
-            '{{/PreviewFlag}}',
-            '<a href="/">1</a>',
-            '<a href="/page2">2</a>',
-            '<a href="/page3">3</a>',
-            '{{#MoreFlag}}',
-            '<span class="J_Points">...</span>',
-            '{{/MoreFlag}}',
-            '<a href="/page6">7</a>',
-            '<a href="/page7">8</a>',
-            '<a href="/page8">9</a>',
-            '{{#NextFlag}}',
-                '<a href="/page8" class="J_Next">&gt;</a>',
-            '{{/NextFlag}}',
-            '</div>'
-    ];
-
-    function Page(){}
-
-    Page.prototype.init = function(){
-        var hash = {};
-
-        if(maxPage >= 9){
-            hash.NextFlag = true;
-            hash.MoreFlag = true;
-        }else{
-            hash.NextFlag = false;
-            hash.MoreFlag = false;
-        }
-
-        hash.PreviewFlag = false;
-
-        var pageArr = [];
-
-        for (var i = 1; i <= maxPage ; i++) {
-            pageArr.push(i);
-        }
-
-        hash.pages = pageArr;
-
-        var $page = Mustache.render(pageTemp.join(''), hash);
-
-        $(commonStr + num).append($page);
-    };
-
-    Page.prototype.render = function(){
-
-    };
-
-    var page = new Page();
-
-	$(".cr-container input").click(function(){
-		var $this = $(this);
-
-        if(!($this.hasClass('current'))){
-            $this.siblings().removeClass('current');
-            $this.addClass('current');
-
-            num = $this.attr("data-num");
-            $(commonStr+num).siblings().hide();
-            $(commonStr+num).show();
-
-            maxPage = $('#J_Data' + num).find('li').length;
-
-            if(maxPage > 3 && num !== 1){
-                page.init();
-            }
-        }
-	});
+    AM('jquery','mustache','main',function(){
+        var start = main;
+        start.init();
+    });
   </script>
 </html>
