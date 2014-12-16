@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>放大镜特效</title>
+<style type="text/css">
+* {
+    margin:0px;
+    padding:0px;
+}
+body {
+    background:#b1b1b1;
+    margin:0px;
+    padding:0px;
+    font-size:14px;
+    color:#000;
+}
+.tips {
+    width:702px;
+    margin:0 auto;
+    line-height:24px;
+    padding-top:10px;
+}
+.bredcolor {
+    color:#fff;
+}
+.small {
+    width:200px;
+    height:450px;
+    background:url("../../images/small.jpg") no-repeat;
+    position:relative;
+    margin:20px 0 20px 10px;
+}
+.large {
+    width:500px;
+    height:420px;
+    overflow:hidden;
+    position:absolute;
+    left:-9999px;
+    top:0;
+}
+.large img {
+    position:absolute;
+    left:0;
+    top:-1px;
+    opacity:0;
+    -moz-transition: top 0s 3600s;
+}
+.pointer {
+    display:block;
+    width:200px;
+    height:168px;
+    background:#fff;
+    opacity:0;
+    filter: alpha(opacity=0);
+    position:absolute;
+    left:0;
+    top:-1px;
+    z-index:10;
+    -moz-transition: top 0s 3600s;
+}
+.small b {
+    display:block;
+    width:200px;
+    height:10px;
+    position:relative;
+    z-index:20;
+    cursor:crosshair;
+}
+.small b:nth-of-type(1) {
+    display:block;
+    width:200px;
+    height:85px;
+}
+.small b:nth-of-type(27) {
+    display:block;
+    width:200px;
+    height:85px;
+}
+.small b:hover ~ .pointer {
+    opacity:0.2;
+    -webkit-transition:0.25s;
+    -moz-transition:0.25s;
+    -ms-transition:0.25s;
+    -o-transition:0.25s;
+    transition:0.25s;
+}
+.small b:hover ~ .large {
+    left:225px;
+}
+.small b:hover ~ .large img {
+    opacity:1;
+    -webkit-transition:0.5s;
+    -moz-transition:0.5s;
+    -ms-transition:0.5s;
+    -o-transition:0.5s;
+    transition:0.5s;
+}
+.small b:nth-of-type(1):hover ~ .pointer {
+    top:0px;
+}
+.small b:nth-of-type(2):hover ~ .pointer {
+    top:10px;
+}
+.small b:nth-of-type(3):hover ~ .pointer {
+    top:20px;
+}
+.small b:nth-of-type(4):hover ~ .pointer {
+    top:30px;
+}
+.small b:nth-of-type(5):hover ~ .pointer {
+    top:40px;
+}
+.small b:nth-of-type(6):hover ~ .pointer {
+    top:50px;
+}
+.small b:nth-of-type(7):hover ~ .pointer {
+    top:60px;
+}
+.small b:nth-of-type(8):hover ~ .pointer {
+    top:70px;
+}
+.small b:nth-of-type(9):hover ~ .pointer {
+    top:80px;
+}
+.small b:nth-of-type(10):hover ~ .pointer {
+    top:90px;
+}
+.small b:nth-of-type(11):hover ~ .pointer {
+    top:100px;
+}
+.small b:nth-of-type(12):hover ~ .pointer {
+    top:110px;
+}
+.small b:nth-of-type(13):hover ~ .pointer {
+    top:120px;
+}
+.small b:nth-of-type(14):hover ~ .pointer {
+    top:130px;
+}
+.small b:nth-of-type(15):hover ~ .pointer {
+    top:140px;
+}
+.small b:nth-of-type(16):hover ~ .pointer {
+    top:150px;
+}
+.small b:nth-of-type(17):hover ~ .pointer {
+    top:160px;
+}
+.small b:nth-of-type(18):hover ~ .pointer {
+    top:170px;
+}
+.small b:nth-of-type(19):hover ~ .pointer {
+    top:180px;
+}
+.small b:nth-of-type(20):hover ~ .pointer {
+    top:190px;
+}
+.small b:nth-of-type(21):hover ~ .pointer {
+    top:200px;
+}
+.small b:nth-of-type(22):hover ~ .pointer {
+    top:210px;
+}
+.small b:nth-of-type(23):hover ~ .pointer {
+    top:220px;
+}
+.small b:nth-of-type(24):hover ~ .pointer {
+    top:230px;
+}
+.small b:nth-of-type(25):hover ~ .pointer {
+    top:240px;
+}
+.small b:nth-of-type(26):hover ~ .pointer {
+    top:250px;
+}
+.small b:nth-of-type(27):hover ~ .pointer {
+    top:252px;
+}
+.small b:nth-of-type(1):hover ~ .large img {
+    top:0;
+}
+.small b:nth-of-type(2):hover ~ .large img {
+    top:-25px;
+}
+.small b:nth-of-type(3):hover ~ .large img {
+    top:-50px;
+}
+.small b:nth-of-type(4):hover ~ .large img {
+    top:-75px;
+}
+.small b:nth-of-type(5):hover ~ .large img {
+    top:-100px;
+}
+.small b:nth-of-type(6):hover ~ .large img {
+    top:-125px;
+}
+.small b:nth-of-type(7):hover ~ .large img {
+    top:-150px;
+}
+.small b:nth-of-type(8):hover ~ .large img {
+    top:-175px;
+}
+.small b:nth-of-type(9):hover ~ .large img {
+    top:-200px;
+}
+.small b:nth-of-type(10):hover ~ .large img {
+    top:-225px;
+}
+.small b:nth-of-type(11):hover ~ .large img {
+    top:-250px;
+}
+.small b:nth-of-type(12):hover ~ .large img {
+    top:-275px;
+}
+.small b:nth-of-type(13):hover ~ .large img {
+    top:-300px;
+}
+.small b:nth-of-type(14):hover ~ .large img {
+    top:-325px;
+}
+.small b:nth-of-type(15):hover ~ .large img {
+    top:-350px;
+}
+.small b:nth-of-type(16):hover ~ .large img {
+    top:-375px;
+}
+.small b:nth-of-type(17):hover ~ .large img {
+    top:-400px;
+}
+.small b:nth-of-type(18):hover ~ .large img {
+    top:-425px;
+}
+.small b:nth-of-type(19):hover ~ .large img {
+    top:-450px;
+}
+.small b:nth-of-type(20):hover ~ .large img {
+    top:-475px;
+}
+.small b:nth-of-type(21):hover ~ .large img {
+    top:-500px;
+}
+.small b:nth-of-type(22):hover ~ .large img {
+    top:-525px;
+}
+.small b:nth-of-type(23):hover ~ .large img {
+    top:-550px;
+}
+.small b:nth-of-type(24):hover ~ .large img {
+    top:-575px;
+}
+.small b:nth-of-type(25):hover ~ .large img {
+    top:-600px;
+}
+.small b:nth-of-type(26):hover ~ .large img {
+    top:-625px;
+}
+.small b:nth-of-type(27):hover ~ .large img {
+    top:-630px;
+}
+</style>
+</head>
+<body>
+    <center>
+        <div class="small">
+            <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+            <b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+            <b></b><b></b><b></b><b></b><b></b><b></b><b></b>
+            <span class="pointer"></span>
+            <div class="large">
+                <img src="../../images/large.jpg" alt="">
+            </div>
+        </div>
+    </center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
