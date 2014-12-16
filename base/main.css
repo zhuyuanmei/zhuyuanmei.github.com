@@ -339,3 +339,8 @@ body{
     .page a.disabled:hover{
         background: #ccc;
     }
+
+    .content-bd ul{
+        max-height: 300px;
+        overflow: hidden;
+    }
