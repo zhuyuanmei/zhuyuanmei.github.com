@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>渐变特效</title>
+<style type="text/css">
+    .img {
+        -webkit-transform:scale(0.6);
+        -moz-transform:scale(0.6);
+        -o-transform:scale(0.6);
+        float:left;
+        margin-left:-50px;
+        margin-right:-50px;
+        margin-top:-10px;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration: 0.5s;
+    }
+    .img img {
+        padding:10px;
+        border:1px solid #fff;
+    }
+    .img:hover {
+        -webkit-transform:scale(0.8);
+        -webkit-box-shadow:0px 0px 30px #ccc;
+        -moz-transform:scale(0.8);
+        -moz-box-shadow:0px 0px 30px #ccc;
+        -o-transform:scale(0.8);
+        -o-box-shadow:0px 0px 30px #ccc;
+    }
+    .img .mask {
+        width: 100%;
+        background-color: rgb(0, 0, 0);
+        position: absolute;
+        height: 100%;
+        opacity:0.6;
+        cursor:pointer;
+        -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
+        -o-transition-duration:0.5s;
+    }
+    #img-1:hover .mask {
+        height:0%;
+    }
+    #img-2:hover .mask {
+        height:0%;
+        margin-top:130px;
+    }
+    #img-4:hover .mask {
+        margin-left:219px;
+        margin-top:135px;
+        height:0%;
+        width:0%;
+    }
+    #img-3 #mask-1 {
+        width:50%;
+    }
+    #img-3 #mask-2 {
+        width:50%;
+        margin-left:211px;
+    }
+    #img-3:hover #mask-1 {
+        width:0%;
+    }
+    #img-3:hover #mask-2 {
+        margin-left:430px;
+        width:0%;
+    }
+    #img-5:hover .mask {
+        margin-left:219px;
+        margin-top:135px;
+        height:0%;
+        width:0%;
+        -webkit-transform: rotateX(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(-360deg);
+    }
+    #img-6:hover .mask {
+        margin-left:219px;
+        margin-top:135px;
+        height:0%;
+        width:0%;
+        -webkit-transform: rotateZ(750deg);
+        -moz-transform: rotateZ(750deg);
+        -o-transform: rotat(750deg);
+    }
+
+    html{
+        height:100%;
+        margin:0;
+        padding:0;
+        width:100%;
+        background-color:#242424;
+        font-family:arial;
+    }
+    body{
+        height:100%;
+        margin:0 auto;
+        padding:0;
+        width:980px;
+    }
+    #logo  {
+        background-color:#242424;
+        color:#F1F1F1;
+        font-size:43px;
+        padding:15px 0 6px;
+        text-shadow:0 0 2px #FFFFFF;
+    }
+    #logo a {
+        color:#F1F1F1;
+    }
+    #container{
+        width:100%;
+        min-height:800px;
+        padding-top: 100px;
+        background-color:#000;
+    }
+    a{
+        color: rgb(0, 114, 191); text-decoration: none;
+    }
+    .heading{
+        font-size:24px;
+        color:#dfdfdf;
+        text-align:center;
+        padding-top:20px;
+    }
+    .legal{
+        text-align:center;
+        color:#5f5f5f;
+        font-size:16px;
+        margin-top:100px;
+        background:-moz-linear-gradient(center top , #000, #242424) repeat scroll 0 0 transparent;
+        background:-webkit-gradient(linear,left top,left bottom,color-stop(0, #000),color-stop(1, #242424));
+        background:-o-gradient(linear,left top,left bottom,color-stop(0, #000),color-stop(1, #242424));
+
+    }
+    a{
+        color: rgb(0, 114, 191); text-decoration: none;
+    }
+    .warning{
+        color:#555;
+        text-align:center;
+        font-size:12px;
+    }
+    .msg{
+        color:#dfdfdf;
+        text-align:center;
+        font-size:14px;
+        line-height:1.5em;
+    }
+    .clearfix{
+        clear:both;
+        float:none;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <div id="image-container">
+            <div class="img" id="img-1">
+                <div class="mask"></div>
+                <img src="../../images/gra_01.jpg"> </div>
+            <div class="img" id="img-2">
+                <div class="mask"></div>
+                <img src="../../images/gra_02.jpg"> </div>
+            <div class="img" id="img-3">
+                <div class="mask" id="mask-1"></div>
+                <div class="mask" id="mask-2"></div>
+                <img src="../../images/gra_03.jpg"> </div>
+            <div class="img" id="img-4">
+                <div class="mask"></div>
+                <img src="../../images/gra_04.jpg"> </div>
+            <div class="img" id="img-5">
+                <div class="mask"></div>
+                <img src="../../images/gra_05.jpg"> </div>
+            <div class="img" id="img-6">
+                <div class="mask"></div>
+                <img src="../../images/gra_06.jpg"> </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
