@@ -78,14 +78,15 @@ body{
 			padding:20px 10px;
 			font-size:15px;
 			font-weight:bold;
-			color:rgba(104,171,194,1);
+            background:#fff;
+			color:#68ABC2;
 			text-decoration:none;
             border-radius:5px;
             -webkit-transition:background 0.5s linear, color 0.5s linear 0.5s;
         }
 		
 		.catalog li a:hover{
-			background:rgba(26,89,120,0.9);
+			background:#68ABC2;
             color:#fff;
 		}
 		
