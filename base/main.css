@@ -318,6 +318,7 @@ body{
         color:rgba(104,171,194,1);
         text-decoration: none;
         border-radius:5px;
+        font-family:italic;
     }
 
     .page a:hover{
