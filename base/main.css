@@ -79,7 +79,6 @@ body{
 			font-size:15px;
 			font-weight:bold;
 			color:rgba(104,171,194,1);
-            background:transparent;
 			text-decoration:none;
             border-radius:5px;
             -webkit-transition:background 0.5s linear, color 0.5s linear 0.5s;
