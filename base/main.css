@@ -81,11 +81,10 @@ body{
 			color:#68ABC2;
 			text-decoration:none;
             border-radius:5px;
-            -webkit-transition:background 0.5s linear, color 0.5s ease-in;
+            -webkit-transition:color 0.5s ease-in;
         }
 		
 		.catalog li a:hover{
-			background:#C6EDFA;
             color:#fff;
 		}
 		
