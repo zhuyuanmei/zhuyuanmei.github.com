@@ -81,12 +81,7 @@ body{
 			color:#68ABC2;
 			text-decoration:none;
             border-radius:5px;
-            -webkit-transition:color 0.5s ease-in;
         }
-		
-		.catalog li a:hover{
-            color:#fff;
-		}
 		
         .cr-container{
                 width:600px;
